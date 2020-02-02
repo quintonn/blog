@@ -4,6 +4,7 @@
 		"name": "Example Post",
 		"tags": [ "Sample", "Blog Post" ],
 		"category": "sample",
-		"date": "01 Jan 2020"
+		"date": "01 Jan 2020",
+		"author": "Example Author"
 	}	
 ]
