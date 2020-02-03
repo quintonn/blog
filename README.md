@@ -22,5 +22,6 @@ The following steps assume you already have a github account and understand some
 6. When you are ready to share your blog and make it available, perform the following:
     1. Make sure your github repository is a public and not a private repository.
     2. In your github repository's settings page, scroll down to find the "GitHub Pages" section and change the "Source" value to **master branch**, or another value if you understand what you are doing.
+7. Star this repository if you enjoy creating your blog using this framework and/or if you want to be aware of any change or improvements to this repository, which could in-turn benefit your blog.
   
 For more information on how to add and style content inside the index.html file for each blog entry, see the example post in [this repository](https://quintonn.github.io/InstaBlog/#!/entry/sample/Example_Post).
