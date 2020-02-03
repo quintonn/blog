@@ -2,9 +2,17 @@
 	{
 		"title": "Example Blog Post",
 		"name": "Example Post",
-		"tags": [ "Sample", "Blog Post" ],
-		"category": "sample",
-		"date": "01 Jan 2020",
-		"author": "Example Author"
-	}	
+		"tags": [ "Sample", "Blog Post", "InstaBlog" ],
+		"category": "Sample",
+		"date": "10 Jan 2020",
+		"author": "Insta Blogger #1"
+	},
+	{
+		"title": "Using Insta Blog",
+		"name": "Using insta blog",
+		"tags": [ "How To", "InstaBlog" ],
+		"category": "Sample",
+		"date": "02 Jan 2020",
+		"author": "Insta Blogger #1"
+	}
 ]
