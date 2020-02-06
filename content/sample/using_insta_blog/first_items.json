@@ -1,0 +1,10 @@
+﻿[
+  {
+    "title": "My Very First Blog Post",
+    "name": "First Blog Post",
+    "tags": [ "Introduction", "MyBlog" ],
+    "category": "General",
+    "date": "01 Jan 2020",
+    "author": "Name Surname"
+  }
+]
