@@ -1,5 +1,9 @@
 {
   "title": "Insta Blog Template",
   "menus": [ "About", "Contact" ],
-  "menuStyle": "default"
+  "menuStyle": "default",
+  "disqus": {
+    "siteName": "instablog-2",
+    "enable": true
+  }
 }
