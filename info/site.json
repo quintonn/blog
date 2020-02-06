@@ -1,5 +1,9 @@
 {
   "title": "Quintonn's Blog",
   "menus": [ "About", "Contact" ],
-  "menuStyle": "default"
+  "menuStyle": "default",
+  "disqus": {
+    "siteName": "abc",
+    "enable":  false
+  }
 }
