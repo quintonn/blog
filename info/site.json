@@ -4,6 +4,6 @@
   "menuStyle": "default",
   "disqus": {
     "siteName": "q10blog",
-    "enable":  false
+    "enable":  true
   }
 }
