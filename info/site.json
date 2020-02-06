@@ -3,7 +3,7 @@
   "menus": [ "About", "Contact" ],
   "menuStyle": "default",
   "disqus": {
-    "siteName": "abc",
-    "enable":  false
+    "siteName": "q10blog",
+    "enable":  true
   }
 }
