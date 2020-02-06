@@ -1,6 +1,6 @@
 {
   "title": "Quintonn's Blog",
-  "menus": [ "About", "Contact" ],
+  "menus": [ "About" ],
   "menuStyle": "default",
   "disqus": {
     "siteName": "q10blog",
