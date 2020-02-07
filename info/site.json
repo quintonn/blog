@@ -7,7 +7,7 @@
     "enable": true
   },
   "feedBurner": {
-    "link": "http://feeds.feedburner.com/QuintonnsBlog",
+    "link": "http://feeds.feedburner.com/QuintonnsBlog?format=xml",
     "mail": "https://feedburner.google.com/fb/a/mailverify?uri=QuintonnsBlog&amp;loc=en_US",
     "enabled": true
   }
