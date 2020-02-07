@@ -33,7 +33,7 @@
         <br />
         An example repository is the one that hosts this website you are reading this blog on. It's called <web-link link="https://github.com/quintonn/InstaBlog">InstaBlog.</web-link>
     </block>
-        <block>
+    <block>
         All of this may seem overwhelming, but using Insta Blog require only that you click a few buttons on GitHub's dashboards.
     </block>
     <block>
@@ -84,9 +84,9 @@
     </block>
 </section>
 
-<section heading="Get Rid of Sample Posts">
+<section heading="Get Rid of Sample Files">
     <block>
-        The first thing is to delete the sample posts that were included when you created your repository using the InstaBlog template.
+        The first thing is to delete the sample files that were included when you created your repository using the InstaBlog template.
         <br />
         You may want to wait and come back to this section at a later stage so you can copy one of the example posts as a template for your posts.
         <br />
@@ -122,9 +122,53 @@
     </block>
 </section>
 
+<section heading="Blog Settings">
+    <block>
+        Before you can add your own posts and publish your blog you need to update some settings that were copied from the original InstaBlog template.
+    </block>
+    <block>
+        In the root folder (same place you see the <span class="font-bold">content</span> folder), there is a folder called <span class="font-bold">info</span>.
+        <br />
+        You need to edit the files inside this folder.
+    </block>
+    <block>
+        The first file to edit here is <span class="font-bold">site.json</span>.
+        <br />
+        Here you can edit your blog's title, the menus to show, the menu style (expand, default or collapse), and also enable or disable other features.
+        <br />
+        The remaining features that may be configured in this file may be added or changed in the future.
+        <br />
+        As of this post, the features present are:
+        <list min-width="100px">
+            <list-item heading="Comments">
+                Add comments to your post using <web-link link="https://disqus.com/">Disqus.</web-link>
+            </list-item>
+            <list-item heading="RSS">
+                Add RSS feed capabilities using <web-link link="https://feedburner.google.com/">Google FeedBurner.</web-link>
+            </list-item>
+        </list>
+        The available settings in the site.json file can be seen below with some comments explaining each item:
+        <br />
+        (Make sure <span class="font-bold">NOT</span> to include any comments in your site.json file)
+        <pre class="language-json"><code class="language-json code-sample inline-block" name="site.json"></code></pre>
+    </block>
+    <block>
+        Next you might notice there are a couple of html files inside the <span class="font-bold">info</span> folder.
+        <br />
+        These are the different pages that correspond to the <span class="font-bold">menus</span> item in the site.json file.
+        <br />
+        For each menu item, there should be an html file with the same name, in lower case and with spaces converted to "_".
+        <br />
+        For example, for a menu item with the name "My Ideas", there should be a file with the name "my_ideas.html".
+        <br />
+        These html files allow the same styling and formatting as blog posts.
+        <br />
+        You will need to edit, add or delete these files to match your needs.
+    </block>
+</section>
 <section heading="Making Changes">
     <block>
-        Now that you've removed all the sample entries, it is time to add your first blog post.
+        Now that you have taken care of some administration, it is time to add your first blog post.
         <br />
         Decide on a name for your first blog post, for example "My Very First Blog Post".
         <br />
@@ -230,5 +274,5 @@
     </block>
     <block>
         Refer to the other articles on the sample <web-link link="https://quintonn.github.io/InstaBlog/">Insta Blog</web-link> for further documentation.
-</block>
+    </block>
 </section>

@@ -1,10 +1,9 @@
 {
   "title": "Insta Blog Template",
   "menus": [ "About", "Contact", "Test Item" ],
-  "_menuStyle":  "expand | default | collapse",
   "menuStyle": "default",
   "disqus": {
-    "siteName": "abc",
+    "siteName": "instablog-2",
     "enabled": false
   },
   "feedBurner": {
