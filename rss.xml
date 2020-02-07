@@ -12,5 +12,10 @@
 			<width>24</width>
 			<height>24</height>
 		</image>
+		<item>
+			<title>Using Insta Blog</title>
+			<link>https://quintonn.github.io/InstaBlog/#!/entry/sample/using_insta_blog</link>
+			<description>Getting started using Insta Blog to create your own blog</description>
+		</item>
 	</channel>
 </rss>
