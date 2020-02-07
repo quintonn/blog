@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+	<channel>
+		<title>Quintonn's Blog</title>
+		<link>https://quintonn.github.io/blog/</link>
+		<description>My personal blog.</description>
+		<language>en-us</language>
+		<image>
+			<title>Quintonn's blog</title>
+			<url>https://quintonn.github.io/blog/images/white-icon-code.png</url>
+			<link>https://quintonn.github.io/blog/</link>
+			<width>24</width>
+			<height>24</height>
+		</image>
+
+		<item>
+			<title>Super Rugby 2020 Kicks Off</title>
+			<link>https://quintonn.github.io/blog/#!/entry/rugby/super_rugby_2020_week_1</link>
+			<description>The start of the 2020 Super Rugby Season</description>
+		</item>
+	</channel>
+</rss>
