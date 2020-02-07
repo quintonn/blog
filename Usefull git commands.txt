@@ -1,0 +1,8 @@
+// To add InstaBlog to a forked or templated repo:
+git remote add template https://github.com/quintonn/InstaBlog
+
+// get changes from parent:
+git fetch --all
+
+// merge changes from parent:
+git merge template/master --allow-unrelated-histories
