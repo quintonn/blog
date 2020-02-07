@@ -8,8 +8,8 @@
     "enabled": false
   },
   "feedBurner": {
-    "link": "http://feeds.feedburner.com/XXXX",
-    "mail": "https://feedburner.google.com/fb/a/mailverify?uri=XXXXXXXX&amp;loc=en_US",
-    "enabled": false
+    "link": "http://feeds.feedburner.com/qInstaBlog",
+    "mail": "https://feedburner.google.com/fb/a/mailverify?uri=qInstaBlog&amp;loc=en_US",
+    "enabled": true
   }
 }
