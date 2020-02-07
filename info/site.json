@@ -8,7 +8,7 @@
     "enabled": false
   },
   "feedBurner": {
-    "link": "http://feeds.feedburner.com/qInstaBlog",
+    "link": "http://feeds.feedburner.com/qInstaBlog?format=xml",
     "mail": "https://feedburner.google.com/fb/a/mailverify?uri=qInstaBlog&amp;loc=en_US",
     "enabled": true
   }
