@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="0.91">
+	<channel>
+		<title>Insta Blog</title>
+		<link>https://quintonn.github.io/InstaBlog/</link>
+		<description>The blog about Insta Blog including documentation and information.</description>
+		<language>en-us</language>
+		<image>
+			<title>Insta blog</title>
+			<url>https://quintonn.github.io/InstaBlog/images/white-icon-code.png</url>
+			<link>https://quintonn.github.io/InstaBlog/</link>
+			<width>24</width>
+			<height>24</height>
+		</image>
+	</channel>
+</rss>
