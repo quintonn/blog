@@ -4,7 +4,7 @@
   "menuStyle": "default",
   "disqus": {
     "siteName": "q10blog",
-    "enable": true
+    "enabled": true
   },
   "feedBurner": {
     "link": "http://feeds.feedburner.com/QuintonnsBlog?format=xml",
