@@ -2,6 +2,7 @@
   "title": "Quintonn's Blog",
   "menus": [ "About" ],
   "menuStyle": "default",
+  "theme": "dark",
   "disqus": {
     "siteName": "q10blog",
     "enabled": true
