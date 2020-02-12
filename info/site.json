@@ -3,6 +3,7 @@
   "menus": [ "About" ],
   "menuStyle": "default",
   "theme": "dark",
+  "themes": [ "dark", "default" ],
   "disqus": {
     "siteName": "q10blog",
     "enabled": true
