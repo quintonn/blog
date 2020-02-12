@@ -2,7 +2,8 @@
   "title": "Insta Blog Template",
   "menus": [ "About", "Contact" ],
   "menuStyle": "default",
-  "theme":  "dark",
+  "themes": [ "dark", "default" ],
+  "theme": "dark",
   "disqus": {
     "siteName": "instablog-2",
     "enabled": false
