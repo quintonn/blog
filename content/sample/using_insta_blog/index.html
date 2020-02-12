@@ -1,0 +1,278 @@
+﻿<section heading="Before Getting Started">
+    <block>
+        Before getting started, it is important to know about <web-link link="https://github.com/">GitHub.</web-link>
+        <br />
+        If you already know what it is and how it works, feel free to skip ahead to the <web-link link="#!/entry/sample/Using_insta_blog?scrollTo=getting_started">getting started</web-link> section.
+    </block>
+    <block>
+        GitHub is basically a web site that allows people to store various kinds of files.
+        <br />
+        The most important and common types of files stored on GitHub, are source code files.
+        <br />
+        You can think of these as special kinds of text files that contain the source code to programs and websites.
+    </block>
+    <block>
+        You might think this is just the same thing as DropBox or Google Docs or OneDrive and so on.
+        <br />
+        The main difference with GitHub is that GitHub also provides a ton of extra features that those others don't, all of which are specific to source code management.
+    </block>
+    <block>
+        These features include keep track of different versions of all the files, controlling who has access to those files and many others.
+        <br />
+        Another feature that is used to run this and any other Insta Blog, is the ability of GitHub to host websites using the files already stored there.
+        <br />
+        This does have 1 important requirement, the files are publicly visible and can been seen by anyone.
+        So it is important not to store secrets, passwords, or any valuable or secret information in any of the files inside a public GitHub repository.
+    </block>
+    <block>
+        One more thing to note about GitHub is the concept of repositories. Repositories are basically projects.
+        <br />
+        This means that all the files in one repository belong to the same project.
+        <br />
+        You can create as many repositories as you wish. And each repository has it's own set of settings, including if it is public or not.
+        <br />
+        An example repository is the one that hosts this website you are reading this blog on. It's called <web-link link="https://github.com/quintonn/InstaBlog">InstaBlog.</web-link>
+    </block>
+    <block>
+        All of this may seem overwhelming, but using Insta Blog require only that you click a few buttons on GitHub's dashboards.
+    </block>
+    <block>
+        This is by no means a comprehensive guide to using GitHub.
+        <br />
+        For more information, please visit GitHub's <web-link link="https://github.com/">website.</web-link>
+    </block>
+</section>
+
+<section heading="Getting Started">
+    <block>
+        To get started with your own blog using Insta Blog you will need a couple of things:
+        <list type="number">
+            <list-item>
+                A <web-link link="https://github.com/">GitHub Account.</web-link>
+            </list-item>
+            <list-item>
+                A very basic knowledge of how GitHub works.
+            </list-item>
+            <list-item>
+                The ability to edit text files that look strange (a.k.a. HTML and JSON files).
+                <br />
+                If this sounds scary or difficult, don't worry, it is not. Just follow along and you'll be fine.
+            </list-item>
+        </list>
+        Once you have your GitHub account setup, you are ready to get started.
+    </block>
+</section>
+
+<section heading="First Step">
+    <block>
+        The first step is to create your own blog by using InstaBlog as a template.
+    </block>
+    <block>
+        To do this, go to <web-link link="https://github.com/quintonn/InstaBlog">https://github.com/quintonn/InstaBlog</web-link>.
+        <br />
+        Then, find and click on the green <span class="font-bold">Use this template</span> button, as can be seen below:
+        <link-image src="use_template.png"></link-image>
+    </block>
+    <block>
+        This will create your own GitHub repository, or project, using InstaBlog as a template.
+        <br />
+        You will be prompted to give your repository a name and a description, as can be seen below:
+        <link-image src="new_repository.png"></link-image>
+    </block>
+    <block>
+        It will take a few seconds after which your repository will be created and you will be directed to your own repository in GitHub.
+    </block>
+</section>
+
+<section heading="Get Rid of Sample Files">
+    <block>
+        The first thing is to delete the sample files that were included when you created your repository using the InstaBlog template.
+        <br />
+        You may want to wait and come back to this section at a later stage so you can copy one of the example posts as a template for your posts.
+        <br />
+        To do this, click on the <span class="font-bold">content</span> folder and then on the <span class="font-bold">sample</span>
+        folder.
+        <br />
+        You will have to manually delete each file in all of the sub-folders as there is no bulk delete option.
+        <br />
+        To do that, navigate to each file and click on the delete button, the one that looks like a little trash can.
+        <br />
+        For example, deleting the <span class="font-bold">index.html</span> file in the <span class="font-bold">sample/example_post</span> folder, should look as follows:
+        <link-image src="delete_file.png"></link-image>
+    </block>
+    <block>
+        When you click the delete button, you will be shown with a new screen that has a section called "Commit Changes".
+        <br />
+        This is part of how GitHub keeps track of all the changes made to files, including being deleted.
+        <br />
+        You may leave all the fields as they are, and click the "Commit Changes" button.
+    </block>
+    <block>
+        Once you are done deleting all the sample files, there should be only 1 file left inside the content folder.
+        <br />
+        This should be a <span class="font-bold">items.json</span> file. Click on this file and then click on the pencil icon to edit the file.
+        <br />
+        This file contains information about all the blog entries of your blog, and contains the information of the sample blog entries that you just removed.
+        <br />
+        This file is what is know as a JSON file. This is a special format and if you are not familiar with it, take some time to try and undestand how it works, it is quite intuitive.
+        <br />
+        You want to edit this file so it only contains the value <span class="font-bold">[]</span>, as follows:
+        <pre class="language-json"><code class="language-json code-sample inline-block" name="clean_items.json"></code></pre>
+        Click the "Commit Changes" button near the bottom of the page.
+    </block>
+</section>
+
+<section heading="Blog Settings">
+    <block>
+        Before you can add your own posts and publish your blog you need to update some settings that were copied from the original InstaBlog template.
+    </block>
+    <block>
+        In the root folder (same place you see the <span class="font-bold">content</span> folder), there is a folder called <span class="font-bold">info</span>.
+        <br />
+        You need to edit the files inside this folder.
+    </block>
+    <block>
+        The first file to edit here is <span class="font-bold">site.json</span>.
+        <br />
+        Here you can edit your blog's title, the menus to show, the menu style (expand, default or collapse), and also enable or disable other features.
+        <br />
+        The remaining features that may be configured in this file may be added or changed in the future.
+        <br />
+        As of this post, the features present are:
+        <list min-width="100px">
+            <list-item heading="Comments">
+                Add comments to your post using <web-link link="https://disqus.com/">Disqus.</web-link>
+            </list-item>
+            <list-item heading="RSS">
+                Add RSS feed capabilities using <web-link link="https://feedburner.google.com/">Google FeedBurner.</web-link>
+            </list-item>
+        </list>
+        The available settings in the site.json file can be seen below with some comments explaining each item:
+        <br />
+        (Make sure <span class="font-bold">NOT</span> to include any comments in your site.json file)
+        <pre class="language-json"><code class="language-json code-sample inline-block" name="site.json"></code></pre>
+    </block>
+    <block>
+        Next you might notice there are a couple of html files inside the <span class="font-bold">info</span> folder.
+        <br />
+        These are the different pages that correspond to the <span class="font-bold">menus</span> item in the site.json file.
+        <br />
+        For each menu item, there should be an html file with the same name, in lower case and with spaces converted to "_".
+        <br />
+        For example, for a menu item with the name "My Ideas", there should be a file with the name "my_ideas.html".
+        <br />
+        These html files allow the same styling and formatting as blog posts.
+        <br />
+        You will need to edit, add or delete these files to match your needs.
+    </block>
+</section>
+<section heading="Making Changes">
+    <block>
+        Now that you have taken care of some administration, it is time to add your first blog post.
+        <br />
+        Decide on a name for your first blog post, for example "My Very First Blog Post".
+        <br />
+        The first thing you need to do is edit the <span class="font-bold">items.json</span> file and add the information for your new blog entry.
+        <br />
+        For each blog entry, you will need to add a JSON section with a few pieces of information as follows:
+        <pre class="language-json"><code class="language-json code-sample inline-block" name="first_items.json"></code></pre>
+        Each line has a specific purpose:
+        <list min-width="100px">
+            <list-item heading="title">
+                This is the title of your blog and what will show up on your home page.
+            </list-item>
+            <list-item heading="name">
+                This is your internal name of your blog post, which must be the same as the folder you will create in the next step.
+            </list-item>
+            <list-item heading="tags">
+                This is a list of tags to associate your blog post with.
+            </list-item>
+            <list-item heading="category">
+                This is the category you want for your blog post, and is important for keeping things organized.
+            </list-item>
+            <list-item heading="date">
+                This is the date that will be shown in your blog post.
+            </list-item>
+            <list-item heading="author">
+                This is an optional value to show the author of the blog post. Usefull for guest blog posts.
+            </list-item>
+        </list>
+        It is important that this items.json file does not have any invalid JSON element in, as your blog will not load correctly if it does.
+        <br />
+        When you are done editing the file, click the commit changes button once again.
+    </block>
+    <block>
+        The next couple of steps will require creating a couple of folders. But creating folders directly in GitHub is not very intuitive, so read the next few sections to the end before attempting to perform each step.
+    </block>
+    <block>
+        Next, you need to create a folder for you category inside the <span class="font-bold">content</span> folder, if it does not already exist.
+        <br />
+        The name of this folder must be exactly the same as the category in the items.json folder, but all lower case and any spaces need to be replaced with the "_" character.
+        <br />
+    </block>
+    <block>
+        Then inside your category folder, create a new folder that matches the <span class="font-bold">name</span> of your blog post, again all lower case and replace spaces with "_".
+    </block>
+    <block>
+        And inside this folder there needs to be an <span class="font-bold">index.html</span> file.
+        <br />
+        To create this file and the required folders, go to the content folder and click "Create new file".
+        <br />
+        This will show the following input for adding a file:
+        <link-image src="new_file.png"></link-image>
+        To create the required folders and the index.html file, you simply need to type the path to the index.html file in the input provided.
+        <br />
+        For example, typing "general/first_blog_post/index.html" and then clicking on the "Commit new file" button will create the folders and file required.
+        <link-image src="new_file_2.png"></link-image>
+    </block>
+    <block>
+        The content of the index.html file is what will be in your blog post entry.
+    </block>
+    <block>
+        The easiest way to to edit this file is to copy the content from one of the sample posts' index.html file.
+        <br />
+        If you have already deleted the sample folders, you can reference the original InstaBlog repository <web-link link="https://github.com/quintonn/InstaBlog">here</web-link> for the same sample posts.
+    </block>
+    <block>
+        An example of a very basic index.html file might be as follows:
+        <pre class="language-html"><code class="language-html code-sample inline-block" name="sample_index.html"></code></pre>
+    </block>
+    <block>
+        Once you are done editing the index.html, commit your changes and get ready to publish your blog.
+    </block>
+</section>
+
+<section heading="Publishing Your Blog">
+    <block>
+        Up until this point your blog is not available on the internet yet, and you can't see what it looks like yet.
+    </block>
+    <block>
+        To change that, we will use one of GitHub's very usefull features called <web-link link="https://pages.github.com/">GitHub Pages.</web-link>
+    </block>
+    <block>
+        To publish your blog, navigate to your repository's <span class="font-bold">Settings</span>, by clicking the Settings icon near the top-right:
+        <link-image src="settings_button.png"></link-image>
+    </block>
+    <block>
+        On the settings page, scroll down to the "GitHub Pages" section, and change the <span class="font-bold">Source</span> value to "master branch":
+        <link-image src="page_source.png"></link-image>
+    </block>
+    <block>
+        After setting the source to "master branch", you should see a message appear indicating that your site is published with a link, as follows:
+        <link-image src="pages_url.png"></link-image>
+    </block>
+    <block>
+        It may take a couple of minutes, but if you click on the link, you should be directed to your very own blog with your first blog post listed.
+        <br />
+        If your blog is not working, please read through this guide again, in detail, to make sure you did not miss any steps.
+    </block>
+</section>
+
+<section heading="Next Steps">
+    <block>
+        After publishing your first blog you may want to learn more about the different ways you can format content with Insta Blog, as well as how to change the default menu.
+    </block>
+    <block>
+        Refer to the other articles on the sample <web-link link="https://quintonn.github.io/InstaBlog/">Insta Blog</web-link> for further documentation.
+    </block>
+</section>

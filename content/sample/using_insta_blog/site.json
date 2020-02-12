@@ -1,0 +1,14 @@
+{
+  "title": "Insta Blog Template",   // the title of your blog
+  "menus": [ "About", "Contact", "Test Item" ],  // the menu items to show, can be empty []
+  "menuStyle": "default",  // posible menu styles (expand, default, collapse)
+  "disqus": {
+    "siteName": "instablog-2", // set this to the Shortname in disqus
+    "enabled": false // set this to true or false to enable to or disable disqus comments
+  },
+  "feedBurner": {
+    "link": "http://feeds.feedburner.com/qInstaBlog?format=xml",  // set this to the google feedburner link generated for your feed, or blank if only using the mail option
+    "mail": "https://feedburner.google.com/fb/a/mailverify?uri=qInstaBlog&amp;loc=en_US",  // set this to the mail subscription link for the google feeburner mail option, or blank if only using rss feeds
+    "enabled": true // set this to true or false to enable to or disable google rss feeds
+  }
+}
