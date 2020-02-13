@@ -6,5 +6,13 @@
 		"category": "Rugby",
 		"date": "01 Jan 2020",
 		"author": "Quintonn"
+	},
+	{
+		"title": "How I Added Comments and RSS Features To The Blog",
+		"name": "Adding Disqus And RSS Feeds",
+		"tags": [ "disqus", "RSS" ],
+		"category": "Blog",
+		"date": "13 Feb 2020",
+		"author":  "Quintonn"
 	}
 ]

@@ -1,0 +1,124 @@
+﻿<section heading="Intoduction">
+    <block>
+        After creating the <web-link link="https://github.com/quintonn/InstaBlog">InstaBlog</web-link> blogging engine, and publishing my <web-link link="https://quintonn.github.io/blog/#!/entry/rugby/super_rugby_2020_week_1">first</web-link> blog post,
+        I wanted to also add the ability to have comments on my blog, and also make it possible for people to subscribe to future posts.
+        <br />
+        While I wanted these features, I also wanted to make sure it's easy and free, if possible, since that is the aim of <web-link link="https://github.com/quintonn/InstaBlog">InstaBlog.</web-link>
+    </block>
+    <block>
+        So, for comments I found and went with <web-link link="https://disqus.com/">Disqus</web-link> as it seemed the easiest to add.
+        <br />
+        And for subscriptions, I found <web-link link="https://feedburner.google.com/">Google feedburner</web-link> to be perfect for the job since it allowes both RSS and email subscriptions.
+    </block>
+    <block>
+        Below I will explain how I added those into in what is essentially a static web page with only Javascript and HTML.
+    </block>
+</section>
+<section heading="Disqus">
+    <block>
+        To add comments to my blog I found <web-link link="https://disqus.com/">Disqus</web-link> and it was pretty straight forward to set things up.
+    </block>
+    <block>
+        First I had to register an account, which basically requires an email address and verifying the email address.
+    </block>
+    <block>
+        The next step is to create a "Site" within Disqus. This is basically an entry for my blog, the entire blog, not just 1 blog post.
+        <br />
+        So naturally I called my site, "Quintonns-Blog".
+        <br />
+        When creating a site, I also had to choose a category from a predetermined list. I went with Entertainment.
+    </block>
+    <block>
+        When creating a site, I was asked to select a plan.
+        <br />
+        They do this by showing 3 plan options, but if I scroll down the page, there is the free, basic, plan. I chose that.
+    </block>
+    <block>
+        Next, I had to choose which platform to install Disqus on.
+        This contains a number of different platforms, but at the bottom is the option for Universal Code,
+        which is what is needed for static web pages, as follows:
+        <link-image src="disqus_install.png"></link-image>
+    </block>
+    <block>
+        The next part was a bit difficult to figure out as I had to find a solution that would work on all my blog posts without me having to edit any codes for each blog post.
+        <br />
+        What I ended up with is the following bit of JavaScript code where the only thing that changes for each blog post is the <span class="font-bold">category</span> and <span class="font-bold">name</span>, which I already have for each blog post.
+        <pre class="language-js"><code class="language-js code-sample inline-block" name="disqus_code.js"></code></pre>
+    </block>
+    <block>
+        Also, I've removed my disqus sitename which can be found from the Disqus admin page on your site's settings.
+        This is your site's <span class="font-bold">shortname</span> which is found on your site's General page after the setup has been completed.
+    </block>
+    <block>
+        The last step is to complete the settings for your site in Disqus on the <span class="font-bold">Configure Disqus</span> page.
+        <br />
+        Here, I had to provide the website that will be used, in this case it was the website of my blog (https://quintonn.github.io/blog).
+        <br />
+        After everything was set, I could click the <span class="font-bold">Complete Setup</span> button.
+    </block>
+    <block>
+        If everything went smooth, you should be able to see comments added to your website if you followed along.
+        <br />
+        If you want to enable Disqus comments on your own <span class="font-bold">InstaBlog</span> blog, all you need to do is add your Disqus sitename to the <span class="font-bold">site.json</span> file and the rest is taken care of automatically.
+    </block>
+</section>
+<section heading="Subscriptions">
+    <block>
+        Next is the ability to have people subscribe to my blog.
+        <br />
+        Initially I was thinking I would need to build a sign up form with a complicated system of sending out emails and so on, but I found <web-link link="https://feedburner.google.com/">Google feedburner</web-link> and it takes care of most things.
+    </block>
+    <block>
+        Before going to set up a feed, you need to create a file that 'describes' your website and provides information about your blog posts in a way that the Google Feedburner understands.
+        <br />
+        This is done by placing a special file at the root of your website or blog.
+        <br />
+        This file must be called <span class="font-bold">rss.xml</span> and should look similar to the following:
+        <pre class="language-xml"><code class="language-xml code-sample inline-block" name="rss.xml"></code></pre>
+    </block>
+    <block>
+        Then it is important to update this <span class="font-bold">rss.xml</span> file every time you add a new blog post.
+        <br />
+        Google's Feedburner will periodically monitor this file and if it detects a new blog entry it will send out notifications to all your subscribers.
+        <br />
+        Each blog entry is denoted by a <span class="font-bold">&lt;item&gt;</span> section in the XML file.
+    </block>
+    <block>
+        Once you have your <span class="font-bold">rss.xml</span> in place, you can head over to Google's Feedburner <web-link link="https://feedburner.google.com/">website</web-link> and create an account.
+    </block>
+    <block>
+        Once you have an account you easily create a new feed on the home page by entering the address, or URL, to your website's rss.xml file in the space provided and clicking on the next button, as follows:
+        <link-image src="feedburner_add_feed.png"></link-image>
+        Google will then look for the rss.xml file at <span class="font-bold">https://mrSmith.github.io/blog/rss.xml.</span>
+        <br />
+        So, it will be easy to test yourself if the file is ready by entering it in your browser to see if it exists.
+    </block>
+    <block>
+        On the subsequent screen you will be asked to provide a title for your blog and you will be given a feed address.
+        <br />
+        After that you will be given a URL for your feed.
+        <br />
+        And all you have to do is provide a link to your users to click on and they will be sent to a Google Feedburner page where they can set up their RSS feed reader.
+        <br />
+        I like to append <span class="font-bold">?format=xml</span> at the end of the URL as that is what I use to add RSS feeds to Outlook directly.
+    </block>
+    <block>
+        But with the current setup, the feeds only allow RSS feeds. With Google Feedburner, it is also possible to add email subscriptions.
+        <br />
+        In your feed's dashboard, go to the <span class="font-bold">publicize</span> section and click on <span class="font-bold">Email Subscriptions.</span>
+        <br />
+        Once you click <span class="font-bold">activate</span> you will be given a link that you can place in your web page directly for users to click on.
+        <br />
+        I chose to modify my link slightly to show an envelope as can be seen at the bottom of this page.
+    </block>
+    <block>
+        From the Email Subscriptions page, there are a number of settings and customizations that can be done, such as modifying the email format that is sent to subscribers.
+        <br />
+        Most of these settings are quite intuitive and is explained quite well, and I found it quite easy to navigate.
+    </block>
+    <block>
+        Once you add the RSS and email links to your web page or blog, you can have users sign-up and receive notifications the next time you post a new entry and update your <span class="font-bold">rss.xml</span> file.
+        <br />
+        One obvious thing that wasn't that obvious to me is that new users will only receive notifications to new blog posts that are created after they have signed up.
+    </block>
+</section>
