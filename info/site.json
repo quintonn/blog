@@ -6,7 +6,7 @@
   "theme": "dark",
   "disqus": {
     "siteName": "instablog-2",
-    "enabled": false
+    "enabled": true
   },
   "feedBurner": {
     "link": "http://feeds.feedburner.com/qInstaBlog?format=xml",
