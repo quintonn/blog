@@ -2,7 +2,7 @@
 	{
 		"title": "Creating a Dynamic Private NuGet Feed with Authentication",
 		"name": "My Own Private NuGet Feed",
-		"tags": [ "NuGet","C#", "QBic", "Web Server" ],
+		"tags": [ "NuGet", "C#", "QBic", "Web Server" ],
 		"category": "Programming",
 		"date": "19 Feb 2020",
 		"author": "Quintonn"
