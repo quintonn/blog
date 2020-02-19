@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <rss version="0.91">
-	<channel>
-		<title>Quintonn's Blog</title>
-		<link>https://quintonn.github.io/blog/</link>
-		<description>My personal blog</description>
-		<language>en-us</language>
-		<image>
-			<title>Quintonn's blog</title>
-			<url>https://quintonn.github.io/blog/images/white-icon-code.png</url>
-			<link>https://quintonn.github.io/blog/</link>
-			<width>24</width>
-			<height>24</height>
-		</image>
-		<item>
-			<title>Super Rugby 2020 Kicks Off</title>
-			<link>https://quintonn.github.io/blog/#!/entry/rugby/super_rugby_2020_week_1</link>
-			<description>The start of the 2020 Super Rugby Season</description>
-		</item>
+  <channel>
+    <title>Quintonn's Blog</title>
+    <link>https://quintonn.github.io/blog/</link>
+    <description>My personal blog</description>
+    <language>en-us</language>
+    <image>
+      <title>Quintonn's blog</title>
+      <url>https://quintonn.github.io/blog/images/white-icon-code.png</url>
+      <link>https://quintonn.github.io/blog/</link>
+      <width>24</width>
+      <height>24</height>
+    </image>
+    <item>
+      <title>Super Rugby 2020 Kicks Off</title>
+      <link>https://quintonn.github.io/blog/#!/entry/rugby/super_rugby_2020_week_1</link>
+      <description>The start of the 2020 Super Rugby Season</description>
+    </item>
     <item>
       <title>How I Added Comments And RSS Features To My Blog</title>
       <link>https://quintonn.github.io/blog/#!/entry/blog/adding_disqus_and_rss_feeds</link>
       <description>In this post I explain how I added comments to my blog and also the ability for readers to subscribe using either RSS feeds or with email</description>
     </item>
-	</channel>
+    <item>
+      <title>Creating a Dynamic Private NuGet Feed with Authentication</title>
+      <link>https://quintonn.github.io/blog/#!/entry/programming/my_own_private_nuget_feed</link>
+      <description>In this post I explain how I setup a private nuget to host multiple repositories with the ability to authenticate reads and writes to each repository.</description>
+    </item>
+  </channel>
 </rss>
