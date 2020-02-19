@@ -1,0 +1,4 @@
+﻿app.Use(async (context, next) =>
+{
+    await container.Resolve<AuthMiddleware>().Invoke(context, next);
+});

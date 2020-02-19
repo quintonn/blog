@@ -1,0 +1,10 @@
+﻿[Authorize]
+public class NuGetPrivateODataController : NuGetODataController
+{
+    public NuGetPrivateODataController()
+        : base(Program.NuGetPrivateRepository)
+        // Replace line above with the one below to allow upload/delete for all authenticated users
+        // : base(Program.NuGetPrivateRepository, new ApiKeyPackageAuthenticationService(false, null))
+    {
+    }
+}

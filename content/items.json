@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Creating a Dynamic Private NuGet Feed with Authentication",
+		"name": "My Own Private NuGet Feed",
+		"tags": [ "NuGet","C#", "QBic", "Web Server" ],
+		"category": "Programming",
+		"date": "19 Feb 2020",
+		"author": "Quintonn"
+	},
+	{
 		"title": "Super Rugby 2020 Kicks Off",
 		"name": "Super Rugby 2020 Week 1",
 		"tags": [ "Super Rugby" ],
@@ -13,6 +21,6 @@
 		"tags": [ "disqus", "RSS" ],
 		"category": "Blog",
 		"date": "13 Feb 2020",
-		"author":  "Quintonn"
+		"author": "Quintonn"
 	}
 ]

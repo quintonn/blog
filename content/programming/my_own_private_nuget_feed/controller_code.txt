@@ -1,0 +1,15 @@
+﻿public override async Task<IHttpActionResult> GetUpdates(ODataQueryOptions<ODataPackage> options, [FromODataUri] string packageIds, [FromODataUri] string versions, [FromODataUri] bool includePrerelease, [FromODataUri] bool includeAllVersions, [FromODataUri] string targetFrameworks = "", [FromODataUri] string versionConstraints = "", [FromUri] string semVerLevel = "", CancellationToken token = default(CancellationToken))
+{
+    if (await IsAuthenticated(NuGetTask.GetUpdates) == false)
+    {
+        return UnauthorizedActionResult();
+    }
+    return await base.GetUpdates(options, packageIds, versions, includePrerelease, includeAllVersions, targetFrameworks, versionConstraints, semVerLevel, token);
+}
+
+
+private IHttpActionResult UnauthorizedActionResult()
+{
+    var res = Unauthorized(new AuthenticationHeaderValue("WWW-Authenticate", $"Basic realm='{this.Request.RequestUri.Host}'"));
+    return res;
+}

@@ -1,0 +1,32 @@
+﻿public override HttpControllerDescriptor SelectController(HttpRequestMessage request)
+{
+    var controllerName = base.GetControllerName(request);
+    request.GetOwinContext().Environment.Add("controllerName", controllerName);
+    
+    var repository = PackageRepositories[controllerName];
+    
+    CurrentNuGetRepository = repository;
+}
+
+////////////////////// Elsewhere in the code
+
+internal static ConcurrentDictionary<string, IServerPackageRepository> PackageRepositories = new ConcurrentDictionary<string, IServerPackageRepository>();
+private static object _Lock = new object();
+private static IServerPackageRepository _CurrentNuGetRepository { get; set; }
+public static IServerPackageRepository CurrentNuGetRepository
+{
+    get
+    {
+        lock (_Lock)
+        {
+            return _CurrentNuGetRepository;
+        }
+    }
+    set
+    {
+        lock (_Lock)
+        {
+            _CurrentNuGetRepository = value;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+﻿config.Services.Replace(typeof(IHttpControllerSelector), new MyCustomControllerSelector(config));

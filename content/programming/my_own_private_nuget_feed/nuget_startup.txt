@@ -1,0 +1,2 @@
+﻿//Simple authenticator that authorizes all users that supply a username and password. Only meant for demonstration purposes.
+appBuilder.Use(typeof(BasicAuthentication));

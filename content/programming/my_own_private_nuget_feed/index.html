@@ -1,0 +1,229 @@
+﻿<section heading="Intoduction">
+    <block>
+        If you've ever worked with .Net or C#, you will at some point have add to include a NuGet repository into your project.
+        <br />
+        I usually include at least <span class="font-bold">Newtonsoft.Json</span> and a few others.
+        <br />
+        NuGet makes dealing with dependencies so much easier and it's a great tool.
+    </block>
+    <block>
+        This is great and all, but a couple of years ago I decided I wanted to host my own NuGet server to store my own libraries and frameworks.
+        <br />
+        These include things I don't want to share because I think they might not be useful to anyone else,
+        or maybe ones that I think I might try and monetize at some later stage.
+    </block>
+</section>
+<section heading="Simplest Option">
+    <block>
+        This wasn't super obvious to me at first, but the easiest way to "host" my own private NuGet feed is to simply create a <span class="font-bold">directory</span>
+        on my computer or network and use that a s NuGet source from Visual Studio.
+    </block>
+    <block>
+        All I need to do then is configure my projects to publish my packages to this folder on successfull builds and then I can tell
+        Visual Studio about this NuGet repository and I can share my personal projects with, well, myself.
+    </block>
+    <block>
+        This is a decent solution for a company that needs to host its own internal repositories,
+        but for collaborating with someone at a different location, this is not suitable.
+    </block>
+</section>
+<section heading="Basic NuGet Server">
+    <block>
+        My first <span class="font-bold">real</span> attempt at a private NuGet server involved a quick internet search in which I discovered the
+        <web-link link="https://docs.microsoft.com/en-us/nuget/hosting-packages/nuget-server">Microsoft article</web-link> explaining how to use
+        the <span class="font-bold">NuGet.Server</span> NuGet package to host a NuGet server.
+        <br />
+        Sounds a bit like NuGet recursion.
+    </block>
+    <block>
+        <link-image image-caption="Image Source: Twitter" image-source="https://twitter.com/nuget" src="nuget.jpg"></link-image>
+    </block>
+    <block>
+        Setting up this private NuGet server was pretty straigh forward and easy and has worked pretty well for me.
+        <br />
+        But then at one point I wanted to share some of my work with potential collaborators.
+    </block>
+    <block>
+        This was quite easy too, as all I had to do was share the URL of my private server and they were able to download my packages.
+        <br />
+        But then it ocurred to me that I may want to restrict or revoke access to my repository in certain cases.
+        <br />
+        Like the time a freelance developer I hired disappeared after the first milestone payment.
+    </block>
+    <block>
+        Now, the NuGet server that I setup using the link above does allow for setting API keys for pushing NuGet packages,
+        but it requires modifying the <span class="font-bold">web.config</span> file which is not ideal and not a dynamic solution at all.
+    </block>
+</section>
+<section heading="More Control">
+    <block>
+        So then I started looking around for ways to get more control over my NuGet repository.
+        <br />
+        But it turns out, there isn't really anything out there, at least not that I could find.
+    </block>
+    <block>
+        The closest thing I found was <web-link link="https://loic-sharma.github.io/BaGet/">BaGet,</web-link> but it is still quite limited in controlling access to the repository.
+    </block>
+    <block>
+        At this point I decided to keep what I had already set up as there didn't seem to be anything else that could offer more control.
+    </block>
+</section>
+<section heading="Fast Forward To Today">
+    <block>
+        For a few years I didn't think about this too much, as I just kept using my private NuGet server as it was serving me pretty well.
+        <br />
+        I would from time to time, see if anything new popped up, but nothing ever did.
+        <br />
+        The thing that annoyed me a little bit was that the NuGet service was nothing more than a Web Service,
+        so I knew it was possible to somehow intercept the requests to my server and authenticate them,
+        and possible even check with API keys without having to hard-code them in the web.config file.
+    </block>
+    <block>
+        And finally today I decided to spend some time to see if I couldn't figure out a way to authenticate access to my private NuGet server.
+    </block>
+    <block>
+        After quite of bit of scouring the internet, I came across a
+        <web-link link="https://github.com/NuGet/NuGet.Server/blob/master/samples/NuGet.Server.V2.Samples.OwinHost/Program.cs">sample NuGet server</web-link>
+        implementation by the NuGet team.
+    </block>
+    <block>
+        And the thing that caught my attention was the fact that this implementation does perform <span class="font-bold">authentication.</span>
+        <br />
+        And this was my starting point.
+    </block>
+</section>
+<section heading="Autenticating My NuGet Server">
+    <block>
+        With this new information I was ready to try and add authentication to my private NuGet server.
+    </block>
+    <block>
+        But to complicate matters a little bit, I was setting up my web server using a framework I built myself.
+        <br />
+        I've come to call this framework <span class="font-bold">QBic.</span>
+        <br />
+        I might be sharing more information on this at a later stage, but for now the relavant part is that this framework has authentication built in,
+        so I had to figure out a way to combine QBic's authentication with this NuGet authentication I found.
+    </block>
+    <block>
+        The first thing I had to do differently was change the way I use the BasicAuthentication middleware.
+        <br />
+        I changed it from this:
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="nuget_startup.txt"></code></pre>
+        To:
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="my_startup.txt"></code></pre>
+        This was mostly because my middleware uses <span class="font-bold">IUnityContainer</span> for dependency injection.
+        <br />
+        I also changed how the actual authentication works, but as I mentioned that, was because I'm using an existing authentication server.
+        <br />
+        But the basics of the authentication are more or less the same.
+    </block>
+    <block>
+        Because of the change of how I setup my authentication, the <span class="font-bold">[Authorize]</span> attribute on the route didn't work for me.
+    </block>
+    <block>
+        To get the authentication working, I had to implement each method in the NuGet controller and perform the authentication first before calling the <span class="font-bold">base</span> method.
+        <br />
+        Here is an example of one of the methods, the rest follow the same concept:
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="controller_code.txt"></code></pre>
+        This does seem a bit unecessary, but this is what it took for my authentication to work.
+    </block>
+    <block>
+        Now when I query the repository from Visual Studio, I am presented with a modal dialog prompting for a username and password:
+        <link-image src="credentials.png"></link-image>
+    </block>
+    <block>
+        But this authentication is only for the query or read access, and not for push or publish.
+        <br />
+        As things stand, that still requires the API keys in the web.config file.
+        <br />
+        And that is because of the <span class="font-bold">ApiKeyPackageAuthenticationService</span> in the Controller constructor:
+    </block>
+    <block>
+        To instead be able to read from a database and dynamically authenticate an API key,
+        I had to replace the call to the ApiKeyPackageAuthenticationService with a custom class that implements the <span class="font-bold">IPackageAuthenticationService</span> interface.
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="ipackageauthenticationservice.txt"></code></pre>
+        This interface has a convenient <span class="font-bold">IsAuthenticated</span> method with the caller's API key to be able to see if the API key is still valid.
+        <br />
+        This allows me to grant or revoke publish rights without modifying the web.config file, and instead use my QBic web site to update database tables.
+        <br />
+        This is a straight forward database lookup with the API that returns true or false if the API key is found and valid.
+    </block>
+</section>
+<section heading="Dynamic Repositories">
+    <block>
+        At this point I had 1 repository that was able to authenticate read requests and publish events, so I was pretty happy so far.
+        <br />
+        But I thought I would also see if I could create dynamic repositories.
+        <br />
+        And I sort of managed to get it working.
+    </block>
+    <block>
+        The biggest hurdle to this is in the Controller constructor. The base class <span class="font-bold">NuGetODataController</span> requires an
+        <span class="font-bold">IServerPackageRepository</span> object and I couldn't get it to use dependency injection, and I am guessing it's not possible to get that working either.
+    </block>
+    <block>
+        And based on the sample projects, I am assuming that is why the controller constructor uses a static call to the <span class="font-bold">Program.NuGetPrivateRepository</span> value
+        that is set in the Program.cs file:
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="program.txt"></code></pre>
+    </block>
+    <block>
+        So, to get around this little obstacle, I did 2 things:
+        <list type="number">
+            <list-item>
+                First, in the Startup code, I retrieve my repository settings from a database, and call the <span class="font-bold">NuGetV2WebApiEnabler.CreatePackageRepository</span> and
+                <span class="font-bold">NuGetV2WebApiEnabler.UseNuGetV2WebApiFeed</span> methods for each repository, making sure each call uses a different controller name.
+                <br />
+                I then store the result from the <span class="font-bold">CreatePackageRepository</span> method in a static Dictionary with the controller's name as the key.
+                <br />
+                The Dictionary should probably be a ConcurrentDictionary?
+            </list-item>
+            <list-item>
+                The next thing, is to create another custom class, this time implementing the <span class="font-bold">IHttpControllerSelector</span> interface.
+                <br />
+                But <span class="font-bold">importantly</span>, do this by creating a class the inherits <span class="font-bold">DefaultHttpControllerSelector.</span>
+                <br />
+                This interface has a <span class="font-bold">SelectController</span> method that is called before the controller's constructor is initialized on every request.
+                <br />
+                The custom class should then be used to replace the default <span class="font-bold">IHttpControllerSelector</span> implementation:
+            </list-item>
+        </list>
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="controller_selector.txt"></code></pre>
+        I am making a bit of an assumption at this point and <span class="line-through">hoping</span> assuming that 2 simultaneous calls won't mix.
+        <br />
+        This is a risk I am willing to take at this point, all things considered.
+        <br />
+        Then the real trick is inside the <span class="font-bold">SelectController</span> method,
+        I can make a call to get the requested controller's name, and use this value to retrieve the associated IServerPackageRepository class and
+        store that in a static field.
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="controller_name.txt"></code></pre>
+        And then in my Controller's constructor, I reference the <span class="font-bold">CurrentNuGetRepository</span> value.
+    </block>
+    <block>
+        Then for my authentication, I also added a setting in my web site to specify which controllers the users and API keys have access to.
+        <br />
+        And I can get the controller's name using the value I stored in the Owin context as follows:
+        <pre class="language-cs"><code class="language-cs code-sample inline-block" name="owin_context.txt"></code></pre>
+    </block>
+    <block>
+        All of this allows me to have multiple NuGet feeds on the same server with the ability to control access to each repository separately.
+    </block>
+</section>
+<section header="Another Disclaimer">
+    <block>
+        Another requirement from the NuGet client built into Visual Studio, seemed to be that the server hosting the repository, should be using a trusted certificate.
+        <br />
+        I had to generate and trust a certificate with my computer as the subject. 
+        <br />
+        Not <span class="font-bold">localhost</span> though, I had to use my computer name.
+    </block>
+</section>
+<section heading="Source Code">
+    <block>
+        I would have liked to share all of the source code at this point, but since my project makes extensive use of my <span class="font-bold">QBic</span> framework, which is not public at this point,
+        I have opted not to share this code right now.
+        <br />
+        I will most likely publish it to GitHub as an open source project at some point, and if I do, I will do my best to remember and update this blog.
+        <br />
+        But, if you are very curious to see the code, feel free to comment below and I might make that happen sooner rather than later.
+    </block>
+</section>
