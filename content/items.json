@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Stop Using Gmail For Work Purposes",
+		"name": "Stop Using Gmail For Work",
+		"tags": [ "Email", "Gmail", "Work", "Profressional", "Life Hack" ],
+		"category": "General",
+		"date": "01 Mar 2020",
+		"author": "Quintonn"
+	},
+	{
 		"title": "Creating a Dynamic Private NuGet Feed with Authentication",
 		"name": "My Own Private NuGet Feed",
 		"tags": [ "NuGet", "C#", "QBic", "Web Server" ],
