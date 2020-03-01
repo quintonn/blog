@@ -27,5 +27,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/programming/my_own_private_nuget_feed</link>
       <description>In this post I explain how I setup a private nuget to host multiple repositories with the ability to authenticate reads and writes to each repository.</description>
     </item>
+    <item>
+      <title>Stop Using Gmail for Work!</title>
+      <link>https://quintonn.github.io/blog/#!/entry/general/stop_using_gmail_for_work</link>
+      <description>In this post I discuss why you should stop using free email accounts like Gmail for work or professional purposes and instead setup an email account using your own custom domain.</description>
+    </item>
   </channel>
 </rss>
