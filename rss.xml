@@ -32,5 +32,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/general/stop_using_gmail_for_work</link>
       <description>In this post I discuss why you should stop using free email accounts like Gmail for work or professional purposes and instead setup an email account using your own custom domain.</description>
     </item>
+    <item>
+      <title>Setting Up My Raspberry Pi as a VPN Gateway</title>
+      <link>https://quintonn.github.io/blog/#!/entry/raspberry_pi/raspberry_pi_vpn_gateway</link>
+      <description>In this post I show how I setup my Raspberry Pi as a VPN gateway for my XBOX to connect through so I can buy and play games in the country where I purchased my XBOX.</description>
+    </item>
   </channel>
 </rss>

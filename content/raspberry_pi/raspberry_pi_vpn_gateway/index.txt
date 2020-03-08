@@ -1,0 +1,146 @@
+﻿# Why?
+
+I bought a [Raspberry Pi](https://www.raspberrypi.org/) about a year ago and have been playing around with it trying various things, but didn't have anything to really use it for.
+
+![Raspberry Pi](raspberry.jpg "A Raspberry Pi")
+
+**Until now!**
+
+Having lived and worked in a number of different countries over the last couple of years, I ended up buying various electronics and gadgets in all sorts of different countries.
+
+As a result, many of those devices were registered or set up in those different places.
+
+And this has led me to a situation where I have an XBOX linked to the Microsoft store in one country, 
+my phone linked to the Google Play Store in another country, 
+my wife's iPhone in yet another country and some other devices linked with possibly even more places.
+
+On top of that, it is sometimes better to browse the internet while being connected to a VPN. For example when searching for travel deals.
+
+As a temporary solution, we signed up to a VPN provider for approximately **$10** a month.  
+This allows us to have a VPN on up to five devices and set the country we want to "be" in while browsing the internet.
+
+As I said, this works fine, but doesn't work quite well on the XBOX or some other devices. 
+
+And I just wanted a reason to play with my Pi.
+
+# The Network
+
+What I wanted to achieve is the following:  
+
+1. Have my **XBOX** connect to my **Raspberry Pi** using a network cable.
+2. Have the Raspberry Pi connect to the VPN.
+3. Connect the Raspberry Pi the my network router over wifi.
+4. Share the internet from the wifi on the Raspberry Pi with my XBOX, over the network cable.
+
+This looks more or less as follows:
+
+![Network setup](network.png "My network setup")
+
+What this would allow me to do is to play and purchase XBOX games as if I am physically in the country where I bought my XBOX without having to change my region
+or change my payment methods and who knows what else.  
+
+This is a silly problem to have in my opinion, I don't understand why all the market places and app stores restrict access based on **physicall** location.  
+
+What happens when people just go on holiday and take their devices with them?  
+Are they then not allowed to buy apps and games in those different countries?  
+
+And that is why I wanted to have my Raspberry Pi serve as a VPN gateway to my XBOX and possibly other devices in the future.
+
+# The Setup
+
+The solution ended up being **A LOT** easier than I thought.  
+
+I am a software developer and I consider myself quite competent when it comes to computers and stuff, but when it comes to Linux and networking, 
+I am quite a novice.  
+
+But I am an expert at using **Google.**
+
+So, with my internet searching super power, I managed to come up with a solution, after many hours of trial and error.
+
+I used a Raspberry Pi 3B for this, and these instructions might not work exactly the same for other models, but this might give you a good starting point.
+
+I found most of my solution from [this](https://gist.github.com/trepidacious/ef3d68014258843944e3df0570876031) github gist by [trepidacious](https://gist.github.com/trepidacious).
+
+After obtaining my Raspberry Pi I installed the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) Operating System which is the recommended 
+operating system for a Raspberry Pi.
+
+For the setup to work, you will need your wifi's IP range and the router's IP address, which is usually something like **192.168.X.1**.
+
+With this information in hand, open a terminal on the Raspberry Pi, or **SSH** into it.
+
+The first task is to setup all the network interfaces on the Raspberry Pi. To do this, run the following command to open the **Interfaces** file:
+```     
+sudo nano /etc/network/interfaces
+```
+
+And set the content of this file as follows:  
+**Note how I put my eth0 interface on a different IP range!**
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet static
+    address 192.168.Z.33
+    netmask 255.255.255.0
+    dns-nameservers 192.168.X.1
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet static
+    wpa-ssid "XXXX"
+    wpa-psk "XXXXX"
+    address 192.168.X.20
+    netmask 255.255.255.0
+    gateway 192.168.X.1
+    dns-nameservers 192.168.X.1
+```
+
+Press Ctrl+X to quit the file, and don't forget to press "Y" to save the changes.
+
+As I said, I am no expert in Linux or networking, but I assume this sets up the different networks my Raspberry Pi connects to and also assigns it static 
+IP address on both the ethernet and the Wifi. The wifi static detail is probably not required, come to think of it. But it's working for now so I will leave it.
+
+Next, edit another file by executing this command:
+```     
+sudo nano /etc/rc.local
+```
+
+And set it's content as follows:
+```
+sudo iptables -t nat -A  POSTROUTING -o wlan0 -j MASQUERADE
+
+sudo iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+sudo iptables -A FORWARD -i tun0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i wlan0 -o tun0 -j ACCEPT
+```
+
+Now this file is pretty much a mystery to me.  
+I copy-pasted most of it and modified various values until it worked.  
+
+I am guessing these command tells the Raspberry Pi to **forwards** traffic between the VPN (tun0) and the wifi (wlan0).  
+But what exactly it does, I'm not too sure.
+
+And after setting all of this, restart the Raspberry Pi with the following command: 
+```
+sudo reboot
+```
+
+Next, all that is left is to connect the VPN on the Raspberry Pi, and connect the XBOX.  
+
+Connecting the VPN depends on what VPN provider you have, but for me it was as simple as running 1 command to connect to the country of my choice.
+
+Connect the XBOX and the Raspberry Pi using a network cable and then configure the IP address settings for the XBOX as follows:
+
+On the XBOX, choose to set the network settings manually, and enter the following (or similar) information:  
+**IP Address:** 192.168.Z.66  
+**Netmask:**    255.255.255.0  
+**gateway:**    192.168.Z.33  
+**DNS Server:** 192.168.X.1  
+
+And once the XBOX resets it's network information, it should be connected to the internet over the VPN on the Raspberry Pi.  
+You can confirm this by opening the internet browser on the XBOX and typing "What is my ip address" in the search box.  
+It should show that you are in the country that you connected your VPN to.  
+
+Now you can play or buy games as if you were in the country where you purchased your XBOX, or other device.

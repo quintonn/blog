@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Setting Up My Raspberry Pi as a VPN Gateway",
+		"name": "Raspberry Pi VPN Gateway",
+		"tags": [ "VPN", "Gateway" ],
+		"category": "Raspberry Pi",
+		"date": "08 Mar 2020",
+		"author": "Quintonn",
+		"sourceType": "markdown"
+	},
+	{
 		"title": "Stop Using Gmail For Work Purposes",
 		"name": "Stop Using Gmail For Work",
 		"tags": [ "Email", "Gmail", "Work", "Profressional", "Life Hack" ],
