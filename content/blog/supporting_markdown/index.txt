@@ -1,0 +1,166 @@
+﻿# Everyone's Doing It
+
+After creating a few blog posts using my [InstaBlog Engine](https://github.com/quintonn/InstaBlog) I realized editing **HTML** files was a bit too tedious.  
+
+I could never remember the exact syntax and names of the custom HTML elements to add images, links, etc.
+
+So I knew I had to make it easier.  
+
+The obvioius choice here was [Markdown!](https://en.wikipedia.org/wiki/Markdown)  
+
+[GitHub](https://www.github.com/) uses it, amongst others, so I thought I would try and add it to my blog engine as well.  
+
+And it turned out much easier than I anticipated.
+
+# How Did I Add Markdown Support
+
+So, how exactly did I manage to add markdown support while keeping the look and feel of the blog the same?  
+
+This was the part I expected to be difficult, but ended up being a lot easier than I though.  
+
+I initially thought I was going to have to parse the different kinds of [Markdown syntaxes](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) myself.  
+But luckily I discovered [Marked JS](https://marked.js.org/).
+
+MarkedJS allows me to load the Markdown script, the same way I am already loading the HTML file for the regular blog generation.  
+And then, using the MarkedJS library, I am able to specify how I would like the different components or elements to be rendered.  
+And I can do this by specifying the HTML to be generated for each item.
+
+Since I am using [Tailwind CSS](https://tailwindcss.com/) to style the blog, it was pretty easy to style the elements in-line.
+
+I was able to create 1 additional method in my Typescript file to perform the markdown conversion or parsing, and it as follows:
+
+```csharp
+private setupMarkdownRenderer(rootPath:string): any
+{
+    let self = this;
+    let defaultRenderer = new marked.Renderer()
+    const renderer = new marked.Renderer();
+
+    renderer.heading = function (text: string, level: any)
+    {
+        const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+        if (level == 1)
+        {
+            let headingId = escapedText.toLowerCase().replace(/ /g, '_');
+            let url = window.location.hash.split("?")[0];
+            let sectionUrl = url + "?scrollTo=" + headingId;
+
+            return `
+                <div class="text-xl lg:text-2xl text-left font-extrabold my-2 md:my-4" ng-attr-id="${headingId}">
+                    <a ng-href="${sectionUrl}">
+                        ${text}
+                    </a>
+                </div>`;
+        }
+
+        let largeSize = '';
+        let smallSize = '';
+
+        switch (level)
+        {
+            case 1:
+                largeSize = 'text-xl';
+                smallSize = 'text-lg';
+                break;
+            case 2:
+                largeSize = 'text-lg';
+                smallSize = 'text-base';
+                break;
+            case 3:
+                largeSize = 'text-base';
+                smallSize = 'text-sm';
+                break;
+            case 4:
+                largeSize = 'text-sm';
+                smallSize = 'text-xs';
+                break;
+            case 5:
+            case 6:
+                largeSize = 'text-xs';
+                smallSize = 'text-xs';
+                break;
+            default:
+                largeSize = 'text-lg';
+                smallSize = 'text-base';
+                break;
+        }
+
+        return `<div class='${smallSize} lg:${largeSize} text-left font-extrabold my-2 md:my-4'>${text}</div>`;
+    };
+
+    renderer.paragraph = (text : string) =>
+    {
+        return `<div class='text-left'><block>${text}</block></div>`;
+    };
+
+    renderer.code = (code: string, infostring: string, escaped: boolean) =>
+    {
+        let formattedCode = code;
+        if (typeof infostring != 'undefined' && infostring != null && infostring.length > 0)
+        {
+            formattedCode = self.templateService.formatCode(code, infostring);
+        }
+
+        return `<div class='text-left'><block><pre class="language-${infostring}"><code class="language-${infostring} inline-block">${formattedCode}</code></pre></block></div>`;
+    };
+
+    renderer.strong = (text: string) =>
+    {
+        return `<span class="font-bold">${text}</span>`;
+    };
+
+    renderer.image = (href: string, title: string, text: string) =>
+    {
+        let path = href;
+        return `<link-image src="${path}" image-caption="${title}" image-source="${path}"></link-image>`;
+    };
+
+    let listCache: Array<string> = [];
+
+    renderer.list = (body: string, ordered: boolean, start: number) =>
+    {
+        let listType = '';
+        if (ordered == true)
+        {
+            listType = 'type="number"';
+        }
+        else
+        {
+            listType = 'type="bullet"';
+        }
+
+        let content = '';
+        for (let i = 0; i < listCache.length; i++)
+        {
+            let item = `<list-item>${listCache[i]}</list-item>`;
+            content = content + item;
+        }
+
+        let result = `<block class='text-left'><list ${listType}>${content}</list></block>`;
+
+        listCache = [];
+
+        return result;
+    };
+```
+
+This now allows me to create blog entries using Markdown instead of HTML, and I must admit, it's a lot quicker to create blog entries using Markdown.  
+
+To finish writing this blog post will take less than 30min (including testing and some minor code changes), whereas doing it with HTML took about an hour or more each time.
+
+# What's Next?
+
+I think HTML and Markdown will be the only formats the blog supports for now. I don't foresee a need for other formats.  
+But if someone were to request something else, I would consider it of course.
+
+As for my needs, I might look at adding more themes or styles.
+
+Another feature I try and add is the ability to subscribe to individual tags, rather than the entire blog as a whole.  
+I'm sure many people might be interested in my programming blog items, but maybe not the Rugby items, and vice versa.  
+
+But for now I think the blog engine has progressed more than I anticipated.  
+
+But as far as I can tell, no one else is using it yet.  
+
+Would like to see someone else using it and get some feedback.

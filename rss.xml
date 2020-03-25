@@ -37,5 +37,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/raspberry_pi/raspberry_pi_vpn_gateway</link>
       <description>In this post I show how I setup my Raspberry Pi as a VPN gateway for my XBOX to connect through so I can buy and play games in the country where I purchased my XBOX.</description>
     </item>
+    <item>
+      <title>Supporting Markdown In InstaBlog</title>
+      <link>https://quintonn.github.io/blog/#!/entry/blog/supporting_markdown</link>
+      <description>I've added the ability to write blog entries using Markdown, and it has made a huge difference. It's much easier than writing HTML code. In this post I talk about how I managed to achieve that.</description>
+    </item>
   </channel>
 </rss>
