@@ -42,5 +42,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/blog/supporting_markdown</link>
       <description>I've added the ability to write blog entries using Markdown, and it has made a huge difference. It's much easier than writing HTML code. In this post I talk about how I managed to achieve that.</description>
     </item>
+    <item>
+      <title>Migrating a Hg repo to Git</title>
+      <link>https://quintonn.github.io/blog/#!/entry/programming/migrate_a_hg_repo_to_git</link>
+      <description>In this post I go through the steps and process to easily migrate a Hg repository to Git, including the entire commit history</description>
+    </item>
   </channel>
 </rss>

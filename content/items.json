@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Migrating a Hg repo to Git",
+		"name": "Migrate a Hg repo to Git",
+		"tags": [ "Hg", "Git" ],
+		"category": "programming",
+		"date": "25 Apr 2020",
+		"author": "Quintonn",
+		"sourceType": "markdown"
+	},
+	{
 		"title": "Supporting Markdown In InstaBlog",
 		"name": "Supporting Markdown",
 		"tags": [ "Markdown" ],

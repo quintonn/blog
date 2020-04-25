@@ -1,0 +1,63 @@
+﻿# The End of Hg?
+
+A few months ago I receieved an email from [BitBucket](https://bitbucket.org/) that they will no longer be supporting Hg (a.k.a Mercurial).  
+It also stated something that led me to believe that I would not be able to access any of my Hg code repositories from 1 Feb 2020, although I have still been able to access them.  
+I'm also still able to push changes, so I'm a bit confused about the alarming emails I received.  
+
+BitBucket stated that they will only be supporting Git moving forward, and that all repositories should be converted to Git repositories and pushed that way.  
+They did offer some articles on how to migrate from Hg to Git, but I would have expected an easier "Click here to migrate your repos" type solution from a listed company such as Atlassian.  
+
+Nevertheless, I decided to migrate my repositories to git.  
+I have enjoyed using Hg and [TortoiseHg](https://tortoisehg.bitbucket.io/) for many years, and I've put delaying using and getting to know Git and, by extension, Github.  
+
+So today I decided to figure out how to migrate my Hg repositories to Git.  
+I could just push all my code to a new git repository and call it a day, but I like to have my commit history as well, and this blog post will detail how to convert or migrate a Hg repository to a Git repository
+and keep the commit history.  
+
+After a quick internet seach and a couple of failed attempts, I finally managed to settle on a working method for migrating my Hg repos to Git.  
+The guide that I found most helpful was [this one](https://hg-git.github.io/), which was created by the folks at GitHub!
+
+# The Process
+So the steps to migrate a Hg repository to Git is basically as follows:
+
+1. Not sure if this step is required, but I did do this as part of my trial-and-error process.  
+   In the Hg Workbench, in File -> Settings -> Extensions, I enabled the **hggit** extension
+1. Create a new git repository (can be in GitHub or BitBucket, or wherever)
+1. Clone (hg clone) your **existig** HG repository to a new location
+   > hg clone <path/to/your_repo>
+1. Navigate into the repo
+   > cd your_repo
+1. Run the following command, this is so "refs" get created (no idea what those are)  
+   > hg bookmark -r default master 
+1. Edit the file **.hg/hgrc**
+1. Update your [paths] with your git repo url as follows:
+   ```html
+   [paths]
+   default = git+ssh://git@github.com/<your_name>/<your_repo>.git
+   ```
+1. Update the [ui] with your git ssh key as follows:
+   ```html
+   [ui]
+   ssh = ssh -C -i C:\Users\<your_name>\.ssh\id_rsa    
+   ```
+   Or the path where you store your git key
+1. Make sure to save the file
+1. Now push your hg repo by running the following command
+   > hg push  
+   This might take a while depending on your internet connection and size of your repo  
+   **Note:** You are not done yet, all you have done up until now is send your Hg repo to your new Git repository, with your commit history
+1. To be able to use git commit, git pull, git push and so on, you need to clone the github repo locally.
+   The next part I figured out on my own through trial and error, and is not in the linked article.  
+1. git clone your repo to a new (temp) folder:  
+   e.g. run:  
+   > git clone https://github.com/your_name/your_repo.git temp
+1. Navigate into the **temp** directory, or whatever you named it
+1. Copy only the **.git** folder  
+   If you don't see it, you may need to show hidden files and folders in Explorer
+1. Navigate back to the folder where you cloned your Hg repository
+1. Paste the **.git** folder here  
+   Now you should have a folder that has both a .git and .hg folder
+
+Since I am completely switching between Hg and Git, I will be deleting my .hg folder at this point and saying goodbye to Hg, but you may keep both to be able to push/pull from both Git and Hg.  
+
+You may also have done all of this in your original Hg repository location, but I chose to do all of this in a new location just in case something went wrong
