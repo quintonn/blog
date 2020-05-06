@@ -1,0 +1,60 @@
+﻿# QBic
+For the last number of years, I've been building my own .NET platform, or framework, to help me build web-based applications.  
+A .NET Framework-Framework, if you will.  
+
+I often have ideas related to software or technology that I want to test out, and more often than not they require some kind of user-interface and database.  
+
+For a long time, I would just try and quickly throw something together or copy something I've done before, but it would always take me a lot longer to build the non-essential parts, 
+that by the time I got to actually testing out my idea I'm already exhausted or forgot what I wanted to do.
+
+So, like most software developers, I looked at what was available.  
+And there were many different kinds of solutions and tools, but all the ones I looked were either too expensive, or required too much customization, or was too bulky for small projects, or, or, or...  
+
+At the time, I was also not very comfortable with **JavaScript**, **HTML** or **CSS**, and I thought it would be quite neat if I didn't have to write any of that.  
+Or, at least, if I could write it only once.  
+
+So, about 5 or 6 years ago I decided to create my own framework.  
+I guess you can say it is a **CMS** (Content Management System).  
+But I believe it's more than that.  
+
+I wanted something that could allow me to test out my ideas as quickly as possible, and by writing as few lines of code as possible.  
+Something that would allow me to click a button and run immediately without having to write a single line of code.  
+And then be able to write only the code I **needed** to write.  
+
+In the end I created ~~Project 1~~, ~~Project 2~~, ~~WebSite~~, ~~WebTemplate~~, ..., **QBic**.  
+
+I find it's always best to show some examples before getting into the details.  
+So here are a few example screens that **QBic** creates for me, without me having to write any **HTML** or **JavaScript** code.
+
+### Login Screen
+![Login Screen](Login.png "Login Screen")
+
+### Example View
+![View Example](View_Sample.png "Example of a screen view")
+
+### Input Screen Samples
+![Input Sample 1](Input_Sample_1.png "Example Input Screen #1")
+
+![Input Sample 2](Input_Sample_2.png "Example Input Screen #2")
+
+All of these screens are created for every new **QBic** project without writing **any** front-end code such as JavaScript, HTML or CSS!  
+
+# What's Next?
+
+I've been considering, and trying, to monetize this framework for a while, but I have not been very successful.  
+So I decided to open source it!  
+
+The source code for this project is over at [GitHub](https://github.com/quintonn/QBic) and I have also created a Git repository with some [samples](https://github.com/quintonn/QBicSamples) of what can be built using **QBic**.  
+I plan to add more content to the samples project as well as add more documentation.  
+
+Currently, there are a ton of features, but most of them are hidden quite deep, and they're only in the code and in my head, well some of them at least.  
+
+The code is now open-source and available for anyone.  
+Even though this framework makes building a web server quite easy, there are still a small number of steps to set things up.  
+It's not that much at all, and I don't really see a way to reduce those steps.  
+
+But, I also created Visual Studio project template that allows me to create a new **QBic** project, build the code once and hit F5 to run the project and I am presented with a login screen.  
+But I have decided not to give this away for free, and I plan on making this available for a small fee in the near future.  
+
+But in the meantime I would love to see what other people create using **QBic**.  
+

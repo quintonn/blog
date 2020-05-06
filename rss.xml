@@ -47,5 +47,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/programming/migrate_a_hg_repo_to_git</link>
       <description>In this post I go through the steps and process to easily migrate a Hg repository to Git, including the entire commit history</description>
     </item>
+    <item>
+      <title>Open-Sourcing My Web Server Framework</title>
+      <link>https://quintonn.github.io/blog/#!/entry/programming/open_sourcing_my_web_framework</link>
+      <description>I decided to open source a project I've been working on for the last 5 or 6 years. It's a .NET platform for building web servers, CMS, etc.</description>
+    </item>
   </channel>
 </rss>
