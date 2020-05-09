@@ -2,6 +2,9 @@
 For the last number of years, I've been building my own .NET platform, or framework, to help me build web-based applications.  
 A .NET Framework-Framework, if you will.  
 
+In a hurry?  
+You can find it [here](https://github.com/quintonn/QBic).  
+
 I often have ideas related to software or technology that I want to test out, and more often than not they require some kind of user-interface and database.  
 
 For a long time, I would just try and quickly throw something together or copy something I've done before, but it would always take me a lot longer to build the non-essential parts, 
