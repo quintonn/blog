@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Similarities Between Tragedy And Luck",
+		"name": "Tragedy And Luck",
+		"tags": [ "luck", "tragedy", "humans" ],
+		"category": "philosophy",
+		"date": "17 May 2020",
+		"author": "Quintonn",
+		"sourceType": "markdown"
+	},
+	{
 		"title": "Open-Sourcing My Web Server Framework",
 		"name": "Open Sourcing My Web Framework",
 		"tags": [ "Open-Source", "QBic", ".Net" ],
