@@ -52,6 +52,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/programming/open_sourcing_my_web_framework</link>
       <description>I decided to open source a project I've been working on for the last 5 or 6 years. It's a .NET platform for building web servers, CMS, etc.</description>
     </item>
-    
+    <item>
+      <title>Similarities Between Tragedy And Luck</title>
+      <link>https://quintonn.github.io/blog/#!/entry/philosophy/tragedy_and_luck</link>
+      <description>A car accident in the town made me realize people react to other people's fortune and tragedy in a very similar way.</description>
+    </item>
   </channel>
 </rss>
