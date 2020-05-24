@@ -1,0 +1,48 @@
+﻿# The Business Idea
+I have an idea for a mobile application in the food and entertainment industry that I want to develop, and I'm looking for someone to join me.  
+
+I **know** this app will be successful because it will provide people with a very valuable service.  
+It will both help **customers** as well as provide many benefits to the various **businesses** that make use of my app.  
+
+I don't want to go into the details of the app too much at this point, as that is not the purpose of this blog post.   
+I might do that at a later stage.  
+
+At this point, I am looking for someone to **join** me.  
+
+# Why?
+You are probably reading this and thinking to yourself, "Oh great, another person who thinks they have a great idea. Let me guess, they want money!".  
+If you are, you would be wrong!
+
+I'm not looking for financial support!  
+I'm not actually looking for anything specific.  
+
+I can and, at the current rate, probably will create this app by myself, without any outside assistance.  
+**But,** I don't want to!  
+
+It's lonely and not a lot of **fun.**  
+
+# So What Am I Looking For?
+I'm looking for someone to help me stay focused and **motivated.**  
+Some days I get very excited about my idea that I'm able to work on the app and add features and work on my plans and strategy and so on.  
+
+But other days, I just don't have any motivation to work on it, and then I put it aside and don't work on it again for many weeks at a time.  
+
+But I'm not simply looking for a "manager" or someone to send me an email to see if I'm still working on the app.  
+Instead, I'm looking for someone who can make an actual **contribution.**  
+
+The contribution can be one of many forms.  
+
+It can be someone who can help me write the code for the app and the rest of the platform.  This would require some **C#**, **JavaScript** and **HTML** knowledge, or any other language for that matter.  
+None of my code is super complicated, so any programming experience should be sufficient, as long as you have a decent grasp of logic and common sense.  
+
+Other areas of expertise that will be helpful to me could include, inside knowledge of the food and entertainment industry, a **network** to businesses who might end up using my platform and mobile app, 
+experience starting a business based around a mobile application, or any general business operational knowledge could help also.  
+
+And lastly, financial assistance would help as well. I could hire other developers to create the app and platform that I have in mind, although as I mentioned before, this is not my biggest concern at this point.  
+
+I enjoy working on and building the app, but I would like this to not just be another one of my **side projects** that end up in the "unfinished" pile. I have 100's of those.  
+
+I truly believe my idea will impact people as well as businesses in a similar way that [Uber](https://ubser.com) and [Airbnb](https://airbnb.com) impacted their respective industries.  
+
+# Get In Touch
+If any of this seems remotely interesting to you or you think you can and want to help, please get in touch with me via one of the social media platforms that led you to this blog.
