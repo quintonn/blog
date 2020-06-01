@@ -62,5 +62,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/programming/looking_for_a_business_partner</link>
       <description>I am working on a mobile application and platform and I'm looking for someone to join me on this adventure.</description>
     </item>
+    <item>
+      <title>Don't Buy Naked Options</title>
+      <link>https://quintonn.github.io/blog/#!/entry/trading/do_not_buy_naked_options?scrollTo=risk-amp-reward</link>
+      <description>I believe buying naked options, in trading, is almost never a good idea. And in this post I explain my opinion with a brief Netflix example.</description>
+    </item>
   </channel>
 </rss>

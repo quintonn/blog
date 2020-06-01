@@ -1,0 +1,82 @@
+﻿# Disclaimer
+Before I get into anything, be advised that I am not a financial expert, financial advisor or qualified to give financial or trading advice of any kind.  
+**Do not** make any trading or financial decisions based on any information provided by me or in this blog.  
+These are my thoughts and opinions and they are not intended to serve as any trading advice or suggestions.
+
+# So, Don't Buy Naked Options!
+Unless you have inside knowledge or following a specific, proven, trading plan or strategy, there is really **no reason** to buy naked options.  
+I'm not going to discuss selling options, but it is even riskier to sell naked options, and again, unless you **know** what you are doing, **don't** sell naked options.
+
+If you are planning on buying options, you should be buying [Bull Call Spread](https://www.investopedia.com/terms/b/bullcallspread.asp) or a [Bear Put Spread](https://www.investopedia.com/terms/b/bearputspread.asp).  
+
+# Reasoning
+If you're still following a long, you are no doubt asking the very importing question, **why not?**  
+
+I won't blame you if you are thinking that with naked options you can make **more** money, a lot more.  
+Buying naked options allows for **unlimited** profit, and buying option spreads limits the profit potential.  
+
+And this used to be my thinking too.  
+But, once you put **greed** aside, and apply **logic**, you will see why option spreads, make so much more sense.
+
+# Some Basic Maths
+It all comes down to **probability** and **risk.**  
+I am very risk-averse when it comes to investments and trading.  
+I don't like risky endeavours, at all.  
+
+When considering a naked option versus an option spread, you have to ask yourself, what is the probability that your [strike price](https://www.investopedia.com/terms/s/strikeprice.asp) will be reached,
+and how much higher (or lower) does the price need to go, before you make a profit?
+
+**Two** very important components of options trading are the **strike price** and the [option premium](https://www.investopedia.com/terms/o/option-premium.asp)  
+When buying an option, the price of the underlying has to reach your option's strike price + the premium for you to just **break-even**, not even make a profit yet.  
+In other words, the market has to move **significantly** before you even start making any profits, never mind **huge profits** or the imaginary **unlimited profits.**  
+
+In addition to all of that, naked options can be quite **expensive.**  
+
+On the other hand, with an option spread, your profit is **limited**, but your cost is much less.  
+
+# An Example
+It is probably best to illustrate with an example.  
+I will use **Netflix** as an example.  
+
+The current price, as of this writing, of Netflix, is **$424.**  
+
+## The Naked Call
+Let's say we want to buy a **call option** on Netflix with a **strike** price of $425 and with an **expiration date** of 18-Dec-2020, that's a 200 day call options.  
+
+The current option premium for this call option is a wopping **$54** give or take a few dollars.  
+I.E. the cost of buying 1 call option is $5,400.  
+
+So what does that mean?  
+It means the price of Netflix has to reach about **$476** before we start making any profit.  
+And let's **assume** Netflix does reach as high as $500, that will be a profit of about $2,000-$3,000.  That is a change in price of almost 20%.  
+If our initial investment was $5,400 and we made an optimistic $3,000 profit, that's a **55%** **return on investment.**  
+It might seem high, but it's quite a big risk.  
+
+One **advantage** of a naked call over a call spread is that you could sell your call option at **any time** if it has gained value.  
+This is something that might happen from time to time as a result of major news or earnings posted.
+
+## The Call Spread
+Now, let's compare a call spread.  
+
+For the call spread, we will buy the same call option: Strike of $425, expiring 18-Dec-2020 at a cost of about $54.  
+But with the spread, we will sell a call option with a strike of $450, same expiry at a premium of about $43.  
+
+That results in a total cost of about $11, or $1,100 for the final trade.  
+That gives us a maximum profit potential of about **$1,400**.  ($2,500 - $1,100).  
+
+But what will be different?  
+Firstly, our initial investment is about 20% of the naked call trade.  
+Second, for us to reach maxmimum profit, the price of **Netflix** only has to reach $450, instead of $500.  
+That's a change in price of about **6%**, that's a lot less than the 20% change required for the naked option.  
+
+That would result in a **ROI** of about **125%!**  
+
+So that means a call spread carries **less risk** and a potential **higher profit** rate.  
+There is obviously the **posibility** that the naked call could yield **much higher** profits, but as I stated at the beginning, what is the **probability** of that happening?  
+
+A somewhat **major** disadvantage of this strategy though, is that you have to hold both options until **expiration** in order to yield maximum profit.  
+
+# Risk & Reward
+Ultimately it all comes down to **risk vs reward** and how comfortable you are with your trading decisions and strategies.  
+
+But I do believe it is better to buy option spreads rather than naked options, unless one believes a stock will move a **significant** amount, in which case, just go naked! :)
