@@ -106,6 +106,16 @@ This is a judgment call and also depends on your budget.
 When I sold my first **AMD** PUT, it was trading at $28.02. Had I just bought 100 shares (for $2802), I would have had about $8200 now. 
 So with the power of hindsight, it's easy to say what should've or couldn've happened. And it's important to not let that get to you.  
 
+Also, the share/s you choose to sell PUT options on is up to you.  
+I try and choose a share whose price is relatively stable and gradually increasing over time.  
+That is just my choice and comfort zone. You could make, or lose, a lot more money selling PUTs on more expensive and more volatile share, like TESLA for example.  
+
 Because once you start buying shares or options spontaneously, it could be the fastest way to lose a lot of money.  
 Selling PUTs is also not gauranteed, so it's important to only risk an amount that you are comfortable losing if the market should go against you, or crash, like it did earlier in the year because of COVID.  
-In case you're wondering, I was luckly not holding any short PUTs when COVID hit, so I didn't lose any money as a result, but that was purely luck, and nothing I anticipated.
+In case you're wondering, I was luckily not holding any short PUTs when COVID hit, so I didn't lose any money as a result, but that was purely luck, and nothing I anticipated.
+
+# RISK
+If you've read this far, thank you for reading my blog.  
+I would like to remind you, dear reader, that trading options (CALLs and PUTs) is extremely risky and it is possible to lose more money than you invested or have available.  
+So, unless you fully understand and accept the risk, do not attempt to make options trades.  
+And do not make any trades based solely on the information from my blog posts, as I am not an authorized or professional trader or financial advisor.
