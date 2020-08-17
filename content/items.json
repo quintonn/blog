@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Sharing My Trades",
+		"name": "Sharing My Trades",
+		"tags": [ "Strategies", "Options", "Dividends" ],
+		"category": "trading",
+		"date": "17 August 2020",
+		"author": "Quintonn",
+		"sourceType": "markdown"
+	},
+	{
 		"title": "Don't Buy Naked Options",
 		"name": "Do Not Buy Naked Options",
 		"tags": [ "Options", "Strategies" ],

@@ -1,0 +1,111 @@
+﻿# Disclaimer
+Before I get into anything, be advised that I am not a financial expert, financial advisor or qualified to give financial or trading advice of any kind.  
+**Do not** make any trading or financial decisions based on any information provided by me or in this blog.  
+These are my thoughts and opinions and they are not intended to serve as any trading advice or suggestions.
+
+# My Strategies
+In general, I don't like taking risks, on anything.  
+This applies to trading and pretty much anything I do in life.  
+And by risk I mean something that I have no control over the outcome **and** I stand to lose something valuable, or at least something I consider valuable.  
+And that does not only mean money or possession, it could also be my time.  
+So with that in mind and based on my **very limited** trading experience and knowledge, I have settled on 2 basic trading strategies.  
+
+The first strategy involves buying shares that pay dividends.  
+And the second strategy involves selling puts.
+
+# Dividend Shares
+Not everyone knows, but some shares, or stocks, pay **dividends**. Dividends are basically income you earn for holding a certain share. Sort of like interest on money in the bank.  
+Dividends are typically paid 2 or 4 times a year, but it might vary a lot depending on the share.  
+In theory, if I had enough shares of good stocks, I could replace my monthly salary with dividends and basically earn money while doing nothing.  
+But, as I said, that is very theoretical and I would need **A LOT** of money's worth of shares to achieve that, or get extremely lucky.  
+
+But I am not investing in dividend shares to replace my salary, but rather to provide me with a small income when I'm older or no longer work.  
+
+This may seem quite obvious and easy, but the problem is that most shares that pay dividends, pay a very, **very**, small amount of dividends.  
+So if you, like me, have only a limited amount of money to invest, it is important to choose dividends that pay often and a decent **percentage**.  
+Notice, I said percentage, and not amount. And that is because the amount is actually relative to the price of the share, in other words, the percentage.  
+
+So part of my strategy is looking for decent shares to invest in for dividends and what to do with those dividends.  
+The first thing I look for is the percentage, or **yield** as it is called. This is basically what percentage of the share's price I will receive in a 1 year period.  
+For example, **Microsoft** is currently trading at about $210 and it pays 4 dividends per year. And the dividend is currently $0.51.  
+So 4 x $0.51 = $2.04, which is about 0.97%.  
+That is less than 1 percent. Depending on which country you live in, that may actually be more than what you can get in the bank if you just deposit your money. But in some countries it is less.  
+
+My goal is to look for shares that pay close to 10%. That may seem a lot, which it is, and is quite difficult.
+
+The next thing I look for is a reliable company. It doesn't help if I find a company that pays maybe a 15% yield for 2 years but then pays only 1% or less, or even goes bankrupt.  
+We can never be certain whether a company will continue to pay dividends or not, but we can try read up about a company and also have a look at its history to see how long they've already paid dividends for.  
+
+Another feature I look for is how often dividends are paid. Ideally I like to find companies that pay monthly, but that is even more difficult to find than a 10% yield.  
+The reason I look for monthly paying dividends is also part of what I do with my dividends.  
+
+I believe in the power of [compound interest.](https://en.wikipedia.org/wiki/Compound_interest#:~:text=Compound%20interest%20is%20the%20addition,sum%20plus%20previously%20accumulated%20interest)  
+How does that apply to dividends you might ask?  
+Well, instead of being paid money, it is sometimes possible to receive more shares of the same company, usually to the value of the dividends.  
+And these shares, as far as I can tell, come without the transaction fees of purchasing shares that is associated with buying shares in most brokerage platforms.  
+Depending on how much money you invest in dividend paying shares, you will eventually be earning more and more in dividends, and hopefully, in many years from now, the amount will be enough to actually make a difference.  
+
+So far, I've bought shares in the following companies for dividend purposes:
+1. [OXLC](https://finance.yahoo.com/quote/oxlc) - pays about 10% and pays every month (my favourte so far)
+2. [GSK](https://finance.yahoo.com/quote/gsk)
+
+And that's about it for now.  
+I will be sharing any other shares I buy for dividend reasons in the future for anyone interested.  
+
+# Put Selling
+The one thing about dividend share buying is that it is very boring. I buy some shares and then do nothing.  
+I would like to have something else to do, to keep me engaged and following the market prices and shares etc.  
+
+I've dabbled in trading, speculating, options trading, etc, but the only thing that I've managed to succeed in so far, is **PUT selling.**  
+If you don't know what PUT selling is, I strongly urge you to go and read about it [here.](https://www.investopedia.com/trading/introduction-to-put-writing/#:~:text=A%20put%20is%20an%20options,or%20hedge%20against%20such%20drops)  
+
+**NOTE:** Put selling (or writing) can be very risky and you stand to lose a lot more money than you invested, so please do not attempt PUT selling unless you understand all the risks.  
+
+Since PUT selling is quite risky, I prefer to sell [PUT spreads.](https://www.theoptionsguide.com/put-spread.aspx#:~:text=A%20put%20spread%20is%20an,however%2C%20relatively%20cheaper%20to%20employ)  
+Again, if you are unsure what that is, it is best to read up on it.  
+Basically, a PUT spread means I buy one PUT and sell another.
+
+By selling PUT spreads, I receive a little bit of money, **immediately**.  
+And I get to keep that money **no matter what happens** to the price of the share.  
+**BUT,** if the price of the share drops below my short PUT, I will lose $100 for every $1 the share price drops and for every 1 PUT I sold.  
+So you can see it's quite risky.  
+
+But, the only time I lose money, is **IF** the price of the share actually drops. So as long as the share price stays the same, or goes up, I get to keep that money I received.  
+
+I have been "practicing" with PUT selling for a while now, and since October 2019, I've made about **$476** selling [AMD](https://finance.yahoo.com/quote/amd) PUTs.  
+
+The strategy I've settled on after trying a few combinations and price structures is to sell a PUT with a strike price a little bit below the current share price (about $5 below), 
+and simulatneously buying a PUT $1 below that one.  
+
+An example is my last trade (which is still open at the moment).  
+On 11 August, AMD was trading at around $78.65 and I sold 1 PUT with a strike of 76 and expiration date of 28 Aug 2020 for $259.  
+I also bought an AMD PUT with a strike of 75 and same expiration for $224. So in total I received $35.  
+On my platform I pay $3 per leg, so I only received $29 after fees.
+
+There are 100's and 1000's of combinations of expiration dates and strikes etc, so deciding on which strike and what expiration date to use, is pretty much up to how risky you feel and how long you want to be in the trade for.  
+I have settled on selling monthly PUTs as I've found weeklies to be a bit risky and prone to sudden market events. And longer expirations are not that profitable in my opinion.  
+
+Consider my previous example. I basically stand to lose $100 if the share price moves completely against me.  
+And for this "risk" of $100, I received $29. That's a 29% return on risk! Note, I did not say investment, because I didn't realy invest any money.  
+
+If that seems too good to be true, there are a few other things to consider...  
+Most brokerages will require a margin when selling options. For example, the trade in my example requires about $1,000 of margin.  
+That means to be able to sell and buy these PUTs, I have to have at least $1,000 in cash in my account, and that I shouldn't spend it on other things.  
+This differs from brokerage to brokerage, and some may require more or less margin.  
+There are also fees and there may be margin interest and other costs to consider.  
+So, if it takes $1,000 to make $29, that's only 2.9%. But it's still for only 1 month. Assuming I could replicate that 12 times a year, that could turn out to be 34.8%.  
+That is still a pretty impressive return on investment.  
+But as I said, it all depends on the brokerage used and what their fees and margin requirements are.
+
+I will be posting my future PUT selling trades for anyone interested and I may even share a read-only link to a spreadsheet with all my future trades.  
+It took me a while to figure out a nice way to document my trades so it helps me make better trades.
+
+# Decisions
+Sometimes a share price might start increasing drastically, in which case you might think to yourself that buying a CALL would make more money than selling a PUT.  
+This is a judgment call and also depends on your budget. 
+When I sold my first **AMD** PUT, it was trading at $28.02. Had I just bought 100 shares (for $2802), I would have had about $8200 now. 
+So with the power of hindsight, it's easy to say what should've or couldn've happened. And it's important to not let that get to you.  
+
+Because once you start buying shares or options spontaneously, it could be the fastest way to lose a lot of money.  
+Selling PUTs is also not gauranteed, so it's important to only risk an amount that you are comfortable losing if the market should go against you, or crash, like it did earlier in the year because of COVID.  
+In case you're wondering, I was luckly not holding any short PUTs when COVID hit, so I didn't lose any money as a result, but that was purely luck, and nothing I anticipated.
