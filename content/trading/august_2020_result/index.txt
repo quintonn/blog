@@ -1,0 +1,53 @@
+﻿# Disclaimer
+Before I get into anything, be advised that I am not a financial expert, financial advisor or qualified to give financial or trading advice of any kind.  
+**Do not** make any trading or financial decisions based on any information provided by me or in this blog.  
+These are my thoughts and opinions and they are not intended to serve as any trading advice or suggestions.
+
+# First Trade Profit
+I posted in a [previous post](https://quintonn.github.io/blog/#!/entry/trading/sharing_my_trades) about my trading strategies and also my first public trade.  
+The details of the trade is as follows:  
+On 11 August, AMD was trading at around $78.65 and I sold 1 PUT with a strike of 76 and expiration date of 28 Aug 2020 for $259.
+I also bought an AMD PUT with a strike of 75 and same expiration for $224. So in total I received $29.
+On my platform I pay $3 per leg, so I only received $29 after fees.
+On Friday, 28 August 2020, both legs expired worthless, and so nothing more had to be done and I got to keep the $29 of glorious profit.  
+
+Basically, I risked losing $100 at most, and received $29 for that risk. But the $29 is mine to keep no matter what the outcome is, so actually I would not lose more than $71.  
+That is essentially a 'return on risk' of 40%, in only 1 month. I condider that not too bad.
+
+# Opportunity Cost
+There is a bit of an opportunity cost, when selling bull put spread as I have done. And that is the potential profit I could have made if I bought a call option or shares instead of the same stock.  
+AMD's price was around $79 when I made that trade, and it closed on Friday at 85.50. 
+If I had just bought 100 shares of AMD and held them for the same period, I would have made about $5 per share, or $500 at least.  
+But that would have required an investment of almost $7,900 and would have yielded only a 6% profit.  
+Instead of shares, I could have also purchased a call option. A call option for the same period with a strike of $80 would have probably cost about $5 per share, so $500.  
+And since the share price went up just over $5, it probably would have only yielded a small profit.  
+On my next trade, I will document the cost of a call option to be able to make a better comparison.  
+But a big difference between the bull put spread and buying a call option, is that once I buy the call option, the market has to change or move for me to make money.  
+Whereas with the spread option, I receive money even before the market changes and I lose money, only if the market changes significantly.  
+And I like this approach more. But I do monitor the price of the shares so as to notice when it's increasing at a rapid rate, because it might become worth buying call options instead.  
+
+But for now, I'll keep selling the put spread.  
+
+# Next Trade
+I try and open a new trade whenever a previous one closed and I usually try to open it immediately if possible.  
+For my next trade I would have liked to use the strikes of 80 and 79, but when the market opened on the 31st of August, AMD was already up $1.50 and those spreads would only have given me about $20.  
+So, I will load the trade with those strikes for a value of about $35 and see if it gets executud in the next day or 2, else I need to choose higher strikes.  
+The reason I choose $35 is because of the $6 in fees I also have to pay.   
+
+This might again sound too good to be true. But one more thing to remember is that margin is required to place this trade.  
+And on the platform I'm using, the margin for this trade is about $200. But that could go up to $2000 if the price of the share drops while I'm in the trade.  
+And if the required margin exceeds the available cash in my account, my position will be closed and I will make a big loss.  
+So it's important to pay attention to the required margins of your trading platform when placing these kinds of trades.  
+
+I clever platform should recognize the spread trade and require only $100 in margin, but mine doesn't do that.  
+
+# Following Along
+I mentioned in my previous post that I would share my trades going forward.  
+I will document all my trades in a Google Sheets document that can be found [here.](https://docs.google.com/spreadsheets/d/1KIFW4zDYF60cLwgFfQjCby8O29dk0VqOvyC4BroFIxM/edit?usp=sharing)  
+I will include both winners and losers of both the put spreads and any dividend shares I decide to purchase.
+
+# RISK
+If you've read this far, thank you for reading my blog.  
+I would like to remind you, dear reader, that trading options (CALLs and PUTs) is extremely risky and it is possible to lose more money than you invested or have available.  
+So, unless you fully understand and accept the risk, do not attempt to make options trades.  
+And do not make any trades based solely on the information from my blog posts, as I am not an authorized or professional trader or financial advisor.
