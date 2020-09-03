@@ -1,0 +1,39 @@
+﻿# Disclaimer
+Before I get into anything, be advised that I am not a financial expert, financial advisor or qualified to give financial or trading advice of any kind.  
+**Do not** make any trading or financial decisions based on any information provided by me or in this blog.  
+These are my thoughts and opinions and they are not intended to serve as any trading advice or suggestions.
+
+# Patience Is Key
+I [recently posted](https://quintonn.github.io/blog/#!/entry/trading/august_2020_result) about me previous month's trades that yielded about 40% return on investment.  
+And I stated that I would share my next trades.  
+I wanted to do it in the same post, but my previous trades expired on the 27th of August 2020, 
+and on Monday the 31st when the market opened, the price of AMD was higher than I would have liked.  
+So I just waited. I am sort of taking a risk here, because the price of AMD can just continue to go up, but since waiting for the price of the share to come back down costs me nothing, there is no reason to rush into the trade.  
+
+The few days after Monday saw the price of AMD continue to go as high as **$93.50** and I just didn't feel comfortable opening a PUT spread at higher strikes than 80 & 79.  
+
+And today, that wait seems to have paid off.  
+Today the price of AMD opened and dropped down to as low as $83 and the market has only been open for about 3 hours, so it may drop more.  
+But I loaded my trade for strikes 80 & 79 and received $30, after fees. I decided to double down and trade 2 of each leg, so I received $60.  
+
+I've added this trade to my [Google Sheet](https://docs.google.com/spreadsheets/d/1KIFW4zDYF60cLwgFfQjCby8O29dk0VqOvyC4BroFIxM/edit?usp=sharing) if you want to see the prices and costs of my trades.  
+But I will share the outcome at the end of September.
+
+This trade will expire on Friday, 25 September 2020, so I will try and release a new post soon after that, win or lose.  
+
+# Opportunity Cost
+I've mentioned before that selling these PUT spreads has an opportunity cost, and that is if the price goes up a lot, it might be better if I had just bought naked calls.  
+
+So for the sake of learning, I will note down the price of an ATM CALL option on AMD.  
+
+As I check right now, the price of AMD is $83.10 and a call with a strike of 84 and expiration 25 Sept 2020 is $5.15.  
+So, the price of AMD should move to at least about $88 before this call would make any money.  
+But let's see how well this CALL would have done.  
+Note, I am not buying this call option, but simply noting down the details and price/value of the option.  
+Then at expiration I can compare the price to see if it would have made a profit or not.  
+
+# RISK
+If you've read this far, thank you for reading my blog.  
+I would like to remind you, dear reader, that trading options (CALLs and PUTs) is extremely risky and it is possible to lose more money than you invested or have available.  
+So, unless you fully understand and accept the risk, do not attempt to make options trades.  
+And do not make any trades based solely on the information from my blog posts, as I am not an authorized or professional trader or financial advisor.
