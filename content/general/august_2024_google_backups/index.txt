@@ -1,0 +1,189 @@
+﻿# Setting Up Automatic Google Backups In A QBic Application
+
+This post will show how to set up automatic backups in a QBic application and store them in a Google Drive folder.  
+
+Follow along with the steps provided.  
+
+## Google Configuration
+To start, you will need to make some changes to an existing Google account.  
+Basically, you will need a Google **gmail** account for this to work.  
+
+Once you have a **gmail** account, head over to [the google cloud console](https://console.cloud.google.com/).  
+
+On this page, you should see a **Welcome** screen.  
+
+In the top left there should be a drop-down.  
+Click on the drop-down, which should open a window.  
+From there, select **New Project**.  
+
+![New Project](image_1.png "New Project")  
+
+Once you click the **New Project** button, a new window will show up where you need to enter a project name.  
+Enter a project name and click **Create**.  
+
+![Project Name](image_2.png "Project Name")  
+
+This may take a few seconds and a notification should show that the project has been created.  
+
+There should also be a notification window with the option to **select project**.  
+If this does not show up, you can click the same drop-down menu in the top-left as before and select the project you just created.  
+
+Once you've chosen your project, from the dashboard, choose **APIs & Services".  
+
+![APIs & Services](image_3.png "APIs & Services")  
+
+From the APIs & Services page, click to **Enable APIs and Services**.  
+
+![Enable APIs & Services](image_4.png "Enable APIs & Services")  
+
+Once you enable the APIs and Service, you should be presented with a new screen:  
+
+![APIs & Services](image_5.png "APIs & Services")  
+
+In the search bar at the top, enter **Google Drive API**  and hit the return, or "enter" key.  
+
+This should show a list of results, one of them being the **Google Drive API**  
+
+![Google Drive API](image_6.png "Google Drive API")  
+
+Click on the **Google Drive API** option.  
+
+This will show a new screen.  
+
+On the new screen, there should be a button labeled "Enabled", click on that.  
+
+![Enable Google Drive API](image_7.png "Enable Google Drive API")  
+
+This will then do some things on the screen and after a few seconds a new screen will appear with details about the **Google Drive API**.  
+
+Next, on the left, in the menu, should be an option called **Credentials**.  
+Click on that.  
+
+![Credentials](image_8.png "Credentials")  
+
+On the top of the **Credentials** page should be an option to **Create Credentials**.  
+Click on that.  
+This will show a few options.  
+Choose the option called **Service Account**.  
+
+![Service Account](image_9.png "Service Account")  
+
+This will show a new screen where you have to enter details for the service.  
+
+Here you will need to enter a **Service account name**.  
+Enter a name, and click **Create and Continue**.  
+When you enter a name, another field called "Serviec Account ID" will automatically be filled in.  
+Don't change that field.  
+
+When you click on the **Create and Continue** button, it will ask you to select a role.  
+You can type in the filter box to search for **Owner**.  
+
+![Account & Role](image_10.png "Account & Role")  
+
+Select the **Owner** role, and click **Continue**.  
+
+On the next screen you don't need to do anything.  
+Simply click **Done**.  
+
+A service account will now be created and you should see the home screen again, with your new account listed.  
+
+On this screen, click on the **pencil** icon on the far right:  
+
+![Edit Account](image_11.png "Edit Account")  
+
+This will show a new screen.  
+There should be a menu bar on the top, with an option for **Keys**.  
+Click on that, and then select **Add Key** and select **Create New Key**.  
+
+![Create Key](image_12.png "Create Key")  
+
+This will open another screen, where you should select the **JSON** option, and click **Create**.  
+
+![Create JSON Key](image_13.png "Create JSON Key")  
+
+This should create and **download** a JSON file.  
+A notification should pop-up in your browser.  
+If nothing pops up, you may need to check permissions and settings in your browser.  
+There is usually a warning somewhere in the browser, so you may need to look carefully.  
+
+![Download JSON Key](image_14.png "Download JSON Key")  
+
+After the key is downloaded, there is one more step.  
+Click on the **Credentials** menu on the left of the screen again.  
+
+This should show the main credentials screen again.  
+
+Now, note down the **email address** that has been created for you service account:  
+
+![Email Address](image_19.png "Email Address")  
+
+This concludes all the setup that needs to be done in your Google account.  
+
+## Google Drive Setup
+
+The next step is to open the ![Google Drive website](https://drive.google.com/drive/home).  
+
+Here you need to open, or create & open, a Google drive folder where you want backups to be saved.  
+
+In the left of the screen, should be a menu option called **My Drive**, click on that.  
+
+Then, right click in the blank, white area, and select **New Folder**.  
+
+![New Folder](image_15.png "New Folder")  
+
+You can create as many folders, similarly to how you can create folders on your computer or laptop.  
+
+Once you have created, or selected, the folder where you want to store the backups, you need to get the folder's ID.  
+
+This is done by opening the folder, or double clicking on the folder.  
+Once you have opened the folder, look at the **URL**, or address bar in your browser.  
+From there, copy the folder's ID from the address bar, as follows:  
+
+![Folder ID](image_17.png "Folder ID")  
+
+In the example above, the **folder ID** is "1v1QygmFEYrvbe2wLuOc8k0r7sCX-fYw_".  
+
+Copy this folder ID to a file or note it down for later.  
+
+Next, we need to make sure the backup folder is shared with the service account that was created earlier.  
+
+Inside the folder you created for the backups, click on the name at the top, and click on **share**.  
+
+![Share](image_20.png "Share")  
+
+This should open a window where you can enter email addresses.  
+Here, enter the email address of the **service account** that you created earlier, and click **send**.  
+
+![Share & Send](image_21.png "Share & Send")  
+
+## QBic Setup
+
+Next, in your QBic application, open the settings menu.  
+
+There should be a tab called **Google Backups**.  
+
+![Settings](image_16.png "Settings")  
+
+On this screen you need to enter some details from the previous steps.  
+
+Firstly, enter the application name, which is the same as the **service** name we created previously.  
+Next, the **parent folder** field should be set to the folder created in **Google Drive**.  
+Then lastly, the **Credential File** should be the file that was downloaded when you created the **JSON Key**.  
+
+![Settings With Detail](image_18.png "Settings With Detail")  
+
+Once you've entered the required information, click submit.  
+
+And that should be all.  
+
+## Confirm Backups Are Made
+
+It might take up to 24 hours before backups are made and saved to your Google Drive.  
+
+Once backups are made, you should see them in the **Google Drive** folder you created in previous steps:  
+
+![Backups](image_22.png "Backups")  
+
+
+
+This article obtained most of its information from [a medium.com post](https://medium.com/@tanmays.archesoftronix/upload-files-on-g-drive-programmatically-7c3d315d7fee)

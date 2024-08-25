@@ -82,5 +82,10 @@
       <link>https://quintonn.github.io/blog/#!/entry/trading/september_2020_trades</link>
       <description>It took a few days, but the price of AMD finally reached a point where I could enter a new PUT spread trade.</description>
     </item>
+    <item>
+      <title>August 2024 Google Backups</title>
+      <link>https://quintonn.github.io/blog/#!/entry/general/august_2024_google_backups</link>
+      <description>How to set up automatic backups to Google Drive with Qbic.</description>
+    </item>
   </channel>
 </rss>

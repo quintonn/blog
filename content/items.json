@@ -1,124 +1,133 @@
 [
-	{
-		"title": "September 2020 Trades",
-		"name": "September 2020 Trades",
-		"tags": [ "Strategies", "Options" ],
-		"category": "trading",
-		"date": "03 September 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "August 2020 Result",
-		"name": "August 2020 Result",
-		"tags": [ "Strategies", "Options" ],
-		"category": "trading",
-		"date": "31 August 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Sharing My Trades",
-		"name": "Sharing My Trades",
-		"tags": [ "Strategies", "Options", "Dividends" ],
-		"category": "trading",
-		"date": "17 August 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Don't Buy Naked Options",
-		"name": "Do Not Buy Naked Options",
-		"tags": [ "Options", "Strategies" ],
-		"category": "trading",
-		"date": "01 June 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "I'm Looking For A Business Partner",
-		"name": "Looking For A Business Partner",
-		"tags": [ "Business", "idea", "opportunity", "mobile apps" ],
-		"category": "programming",
-		"date": "24 May 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Similarities Between Tragedy And Luck",
-		"name": "Tragedy And Luck",
-		"tags": [ "luck", "tragedy", "humans" ],
-		"category": "philosophy",
-		"date": "17 May 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Open-Sourcing My Web Server Framework",
-		"name": "Open Sourcing My Web Framework",
-		"tags": [ "Open-Source", "QBic", ".Net" ],
-		"category": "programming",
-		"date": "05 May 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Migrating a Hg repo to Git",
-		"name": "Migrate a Hg repo to Git",
-		"tags": [ "Hg", "Git" ],
-		"category": "programming",
-		"date": "25 Apr 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Supporting Markdown In InstaBlog",
-		"name": "Supporting Markdown",
-		"tags": [ "Markdown" ],
-		"category": "blog",
-		"date": "25 Mar 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Setting Up My Raspberry Pi as a VPN Gateway",
-		"name": "Raspberry Pi VPN Gateway",
-		"tags": [ "VPN", "Gateway" ],
-		"category": "Raspberry Pi",
-		"date": "08 Mar 2020",
-		"author": "Quintonn",
-		"sourceType": "markdown"
-	},
-	{
-		"title": "Stop Using Gmail For Work Purposes",
-		"name": "Stop Using Gmail For Work",
-		"tags": [ "Email", "Gmail", "Work", "Profressional", "Life Hack" ],
-		"category": "General",
-		"date": "01 Mar 2020",
-		"author": "Quintonn"
-	},
-	{
-		"title": "Creating a Dynamic Private NuGet Feed with Authentication",
-		"name": "My Own Private NuGet Feed",
-		"tags": [ "NuGet", "C#", "QBic", "Web Server" ],
-		"category": "Programming",
-		"date": "19 Feb 2020",
-		"author": "Quintonn"
-	},
-	{
-		"title": "Super Rugby 2020 Kicks Off",
-		"name": "Super Rugby 2020 Week 1",
-		"tags": [ "Super Rugby" ],
-		"category": "Rugby",
-		"date": "01 Jan 2020",
-		"author": "Quintonn"
-	},
-	{
-		"title": "How I Added Comments and RSS Features To The Blog",
-		"name": "Adding Disqus And RSS Feeds",
-		"tags": [ "disqus", "RSS" ],
-		"category": "Blog",
-		"date": "13 Feb 2020",
-		"author": "Quintonn"
-	}
+  {
+    "title": "Setting Up Automated Google Backups With QBic",
+    "name": "August 2024 Google Backups",
+    "tags": ["General", "QBic"],
+    "category": "general",
+    "date": "25 August 2024",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "September 2020 Trades",
+    "name": "September 2020 Trades",
+    "tags": ["Strategies", "Options"],
+    "category": "trading",
+    "date": "03 September 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "August 2020 Result",
+    "name": "August 2020 Result",
+    "tags": ["Strategies", "Options"],
+    "category": "trading",
+    "date": "31 August 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Sharing My Trades",
+    "name": "Sharing My Trades",
+    "tags": ["Strategies", "Options", "Dividends"],
+    "category": "trading",
+    "date": "17 August 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Don't Buy Naked Options",
+    "name": "Do Not Buy Naked Options",
+    "tags": ["Options", "Strategies"],
+    "category": "trading",
+    "date": "01 June 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "I'm Looking For A Business Partner",
+    "name": "Looking For A Business Partner",
+    "tags": ["Business", "idea", "opportunity", "mobile apps"],
+    "category": "programming",
+    "date": "24 May 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Similarities Between Tragedy And Luck",
+    "name": "Tragedy And Luck",
+    "tags": ["luck", "tragedy", "humans"],
+    "category": "philosophy",
+    "date": "17 May 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Open-Sourcing My Web Server Framework",
+    "name": "Open Sourcing My Web Framework",
+    "tags": ["Open-Source", "QBic", ".Net"],
+    "category": "programming",
+    "date": "05 May 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Migrating a Hg repo to Git",
+    "name": "Migrate a Hg repo to Git",
+    "tags": ["Hg", "Git"],
+    "category": "programming",
+    "date": "25 Apr 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Supporting Markdown In InstaBlog",
+    "name": "Supporting Markdown",
+    "tags": ["Markdown"],
+    "category": "blog",
+    "date": "25 Mar 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Setting Up My Raspberry Pi as a VPN Gateway",
+    "name": "Raspberry Pi VPN Gateway",
+    "tags": ["VPN", "Gateway"],
+    "category": "Raspberry Pi",
+    "date": "08 Mar 2020",
+    "author": "Quintonn",
+    "sourceType": "markdown"
+  },
+  {
+    "title": "Stop Using Gmail For Work Purposes",
+    "name": "Stop Using Gmail For Work",
+    "tags": ["Email", "Gmail", "Work", "Profressional", "Life Hack"],
+    "category": "General",
+    "date": "01 Mar 2020",
+    "author": "Quintonn"
+  },
+  {
+    "title": "Creating a Dynamic Private NuGet Feed with Authentication",
+    "name": "My Own Private NuGet Feed",
+    "tags": ["NuGet", "C#", "QBic", "Web Server"],
+    "category": "Programming",
+    "date": "19 Feb 2020",
+    "author": "Quintonn"
+  },
+  {
+    "title": "Super Rugby 2020 Kicks Off",
+    "name": "Super Rugby 2020 Week 1",
+    "tags": ["Super Rugby"],
+    "category": "Rugby",
+    "date": "01 Jan 2020",
+    "author": "Quintonn"
+  },
+  {
+    "title": "How I Added Comments and RSS Features To The Blog",
+    "name": "Adding Disqus And RSS Feeds",
+    "tags": ["disqus", "RSS"],
+    "category": "Blog",
+    "date": "13 Feb 2020",
+    "author": "Quintonn"
+  }
 ]
